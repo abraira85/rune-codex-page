@@ -3,9 +3,23 @@ description: Suggest a prompt, agent, skill, MCP config or AGENTS.md template to
 labels: ["new item"]
 body:
   - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - engineering
+        - database
+        - devops
+        - security
+        - data-ai
+        - business
+        - qa
+    validations:
+      required: true
+  - type: dropdown
     id: target
     attributes:
-      label: Target
+      label: Tool / type
       options:
         - claude/agents
         - claude/skills

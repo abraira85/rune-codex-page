@@ -11,12 +11,21 @@
 
 Everything here has actually been used somewhere real. Every item is tagged `production` or `experimental` — nothing ships just to pad the count.
 
-## `~ ❯ ls`
+## `~ ❯ ls catalog/`
 
-| Directory | For | Contains |
-|---|---|---|
-| [`claude/`](./claude) | Claude & Claude Code | agents, skills, MCP configs, hooks |
-| [`codex/`](./codex) | OpenAI Codex, Codex CLI, Copilot-style agents | `AGENTS.md` templates, standalone prompts |
+Organized by **area** first — what you're looking for — then by tool and type:
+
+| Area | For |
+|---|---|
+| [`engineering/`](./catalog/engineering) | General software development |
+| [`database/`](./catalog/database) | Data modeling, SQL, query optimization |
+| [`devops/`](./catalog/devops) | Infrastructure, CI/CD, cloud |
+| [`security/`](./catalog/security) | Security review, hardening |
+| [`data-ai/`](./catalog/data-ai) | ML, RAG, data pipelines, LLM ops |
+| [`business/`](./catalog/business) | Leadership, product, strategy |
+| [`qa/`](./catalog/qa) | Testing, quality assurance |
+
+Each area repeats the same pattern — `claude/{agents,skills,mcp,hooks}` and `codex/{agents-md,prompts}` — see [`catalog/README.md`](./catalog/README.md) for the full layout.
 
 ## `~ ❯ cat CONVENTIONS.md`
 
@@ -37,18 +46,29 @@ Full format in [`TEMPLATE.md`](./TEMPLATE.md). Every PR is checked automatically
 
 ## `~ ❯ man install`
 
-No CLI, no package manager — copy what you need, it's just files.
+No package manager, but there is a small installer — it extracts the real
+payload (the tool-relevant front-matter + the actual prompt) and drops it
+where the target tool expects it, instead of you copying the whole
+catalog file by hand:
 
-| Item type | Goes in your project as |
+```
+python3 scripts/install.py catalog/qa/claude/agents/qa-lead.md
+python3 scripts/install.py catalog/qa/claude/agents/qa-lead.md --target ../my-project
+```
+
+| Item type | Behavior |
 |---|---|
-| `claude/agents/*.md` | `.claude/agents/<name>.md` |
-| `claude/skills/*.md` | `.claude/skills/<name>/SKILL.md` |
-| `claude/mcp/*.md` | the config block into your MCP client's config (e.g. `.mcp.json`, `claude_desktop_config.json`) |
-| `claude/hooks/*.md` | the hook block into `.claude/settings.json` |
-| `codex/agents-md/*.md` | your repo's root `AGENTS.md` |
-| `codex/prompts/*.md` | your Codex CLI / agent's custom-instruction config |
+| `<area>/claude/agents/*.md` | writes `.claude/agents/<name>.md` |
+| `<area>/claude/skills/*/SKILL.md` | writes `.claude/skills/<name>/SKILL.md` |
+| `<area>/claude/mcp/*.md` | prints only — JSON configs need a human to merge them |
+| `<area>/claude/hooks/*.md` | prints only — same reasoning |
+| `<area>/codex/agents-md/*.md` | writes `AGENTS.md` at the target root (refuses to overwrite an existing one without `--force`) |
+| `<area>/codex/prompts/*.md` | prints only — no fixed destination |
 
-Every item's body is the exact content to paste — the front-matter (`name`, `status`, `context`) is metadata for this repo, not part of what you copy.
+It never overwrites an existing file silently. Prefer doing it by hand?
+Every catalog file still reads fine on its own — the front-matter (`name`,
+`status`, `context`) is this repo's metadata, and the fenced block under
+"Prompt / instructions" is the exact content to paste.
 
 ## `~ ❯ man contributing`
 
@@ -58,7 +78,7 @@ Releases follow [Semantic Versioning](https://semver.org/) and are tracked in [`
 
 ## `~ ❯ roadmap`
 
-- [ ] First real items in `claude/` and `codex/`
+- [x] First real items in the catalog (`qa/` team: 6 agents, 2 skills)
 - [ ] A generated `index.json` so the catalog is machine-readable
 - [ ] Tagged `v0.1.0` once there's enough here to call a first release
 

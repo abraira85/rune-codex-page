@@ -13,7 +13,7 @@ Volume is not a goal here. A repo with five things that actually work is more us
 
 ## Adding an item
 
-1. Copy [`TEMPLATE.md`](./TEMPLATE.md) into the right folder and rename it to a short, lowercase, hyphenated slug (e.g. `claude/agents/api-reviewer.md`).
+1. Copy [`TEMPLATE.md`](./TEMPLATE.md) into the right folder and rename it to a short, lowercase, hyphenated slug (e.g. `catalog/engineering/claude/agents/api-reviewer.md`).
 2. Fill in every front-matter field. `context` should say *where* and *how* — "used in production to review backend PRs before merge," not "useful for reviewing code."
 3. Run the validator before opening a PR:
    ```
@@ -24,7 +24,23 @@ Volume is not a goal here. A repo with five things that actually work is more us
 
 ## Where things go
 
-| Folder | For |
+Items live under `catalog/<area>/<tool>/<type>/`.
+
+**Pick the area first** — what the item is *for*:
+
+| Area | For |
+|---|---|
+| `engineering` | General software development |
+| `database` | Data modeling, SQL, query optimization |
+| `devops` | Infrastructure, CI/CD, cloud |
+| `security` | Security review, hardening |
+| `data-ai` | ML, RAG, data pipelines, LLM ops |
+| `business` | Leadership, product, strategy |
+| `qa` | Testing, quality assurance |
+
+**Then the tool and type** — this part decides where the file goes once someone copies it into their own project:
+
+| Path | For |
 |---|---|
 | `claude/agents/` | Claude Code subagent definitions |
 | `claude/skills/` | Reusable Claude Skills |
@@ -33,7 +49,7 @@ Volume is not a goal here. A repo with five things that actually work is more us
 | `codex/agents-md/` | `AGENTS.md` templates |
 | `codex/prompts/` | Codex CLI / custom-instruction prompts that aren't a full `AGENTS.md` |
 
-If your item doesn't fit any of these, open an issue first — it might be a new category, not a bad fit.
+If your item doesn't fit any of these, open an issue first — it might be a new area, not a bad fit.
 
 ## Versioning
 

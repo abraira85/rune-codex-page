@@ -1,0 +1,37 @@
+# qa/
+
+Testing, quality assurance, functional and automated validation.
+
+## Team
+
+Six Claude Code subagents that cover a QA function end to end — `qa-lead`
+decides strategy and scope, the four specialists execute, `bug-triage-analyst`
+turns findings into actionable reports. All `experimental`: written for this
+repo, not yet run against a real project — see each file's `context` field.
+
+| Agent | Role |
+|---|---|
+| [`qa-lead`](./claude/agents/qa-lead.md) | Test strategy, scope, and the ship/no-ship call |
+| [`functional-tester`](./claude/agents/functional-tester.md) | Manual/exploratory test cases against a spec |
+| [`browser-automation-tester`](./claude/agents/browser-automation-tester.md) | Drives a real browser (Playwright) to verify a feature |
+| [`test-automation-engineer`](./claude/agents/test-automation-engineer.md) | Writes lasting automated tests into the project's suite |
+| [`api-tester`](./claude/agents/api-tester.md) | Tests REST/GraphQL endpoints against their real contract |
+| [`bug-triage-analyst`](./claude/agents/bug-triage-analyst.md) | Reproduces, minimizes, and severity-rates a bug report |
+
+| Skill | For |
+|---|---|
+| [`test-case-writer`](./claude/skills/test-case-writer/SKILL.md) | Generate a test case matrix from a spec |
+| [`bug-report-template`](./claude/skills/bug-report-template/SKILL.md) | Format a reproduced bug consistently |
+
+## `~ ❯ ls`
+
+| Path | For |
+|---|---|
+| [`claude/agents/`](./claude/agents) | Claude Code subagent definitions |
+| [`claude/skills/`](./claude/skills) | Reusable Claude Skills |
+| [`claude/mcp/`](./claude/mcp) | MCP server configs |
+| [`claude/hooks/`](./claude/hooks) | Claude Code hook configs |
+| [`codex/agents-md/`](./codex/agents-md) | `AGENTS.md` templates |
+| [`codex/prompts/`](./codex/prompts) | Standalone Codex CLI / custom-instruction prompts |
+
+Each item follows the format in [`../../TEMPLATE.md`](../../TEMPLATE.md) and must pass [`../../scripts/validate.py`](../../scripts/validate.py). Install one with `python3 scripts/install.py catalog/qa/claude/agents/qa-lead.md` — see the root [`README.md`](../../README.md#-❯-man-install).

@@ -14,8 +14,11 @@ except ImportError:
     sys.exit("Missing dependency: pip install -r scripts/requirements.txt")
 
 ROOT = Path(__file__).resolve().parent.parent
-ITEM_DIRS = ["claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
-             "codex/agents-md", "codex/prompts"]
+CATALOG = "catalog"
+AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa"]
+TOOL_TYPES = ["claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
+              "codex/agents-md", "codex/prompts"]
+ITEM_DIRS = [f"{CATALOG}/{area}/{t}" for area in AREAS for t in TOOL_TYPES]
 SKIP_FILES = {"README.md", ".gitkeep"}
 REQUIRED_KEYS = {"name", "status", "context"}
 VALID_STATUS = {"production", "experimental"}
@@ -69,7 +72,7 @@ def main():
     for item in items:
         all_errors.extend(validate_file(item))
 
-    print(f"Checked {len(items)} item(s) across {len(ITEM_DIRS)} categories.")
+    print(f"Checked {len(items)} item(s) across {len(AREAS)} area(s) x {len(TOOL_TYPES)} type(s).")
     if all_errors:
         print(f"\n{len(all_errors)} problem(s) found:\n")
         for err in all_errors:

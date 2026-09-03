@@ -1,6 +1,7 @@
 <!--
 Copy this file into the right folder and rename it to your item's slug
-(e.g. claude/agents/api-reviewer.md). Delete this comment block once filled in.
+(e.g. catalog/engineering/claude/agents/api-reviewer.md). Delete this
+comment block once filled in.
 -->
 ---
 name: item-slug
