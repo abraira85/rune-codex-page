@@ -17,7 +17,7 @@ Volume is not a goal here. A repo with five things that actually work is more us
 2. Fill in every front-matter field. `context` should say *where* and *how* — "used in production to review backend PRs before merge," not "useful for reviewing code."
 3. Run the validator before opening a PR:
    ```
-   pip install pyyaml
+   pip install -r scripts/requirements.txt
    python3 scripts/validate.py
    ```
 4. Open a PR using the checklist that's already in the template.

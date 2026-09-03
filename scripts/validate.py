@@ -11,7 +11,7 @@ from pathlib import Path
 try:
     import yaml
 except ImportError:
-    sys.exit("Missing dependency: pip install pyyaml")
+    sys.exit("Missing dependency: pip install -r scripts/requirements.txt")
 
 ROOT = Path(__file__).resolve().parent.parent
 ITEM_DIRS = ["claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
