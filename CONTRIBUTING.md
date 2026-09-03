@@ -47,6 +47,12 @@ Releases follow [Semantic Versioning](https://semver.org/), adapted for a repo o
 
 Every merge to `main` lands in [`CHANGELOG.md`](./CHANGELOG.md) under `[Unreleased]`. Tagged releases move that section under a version heading.
 
+**Cutting a release** (maintainer only):
+
+1. In `CHANGELOG.md`, rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and add a fresh empty `## [Unreleased]` above it.
+2. Commit, then tag and push: `git tag vX.Y.Z && git push origin vX.Y.Z`.
+3. `.github/workflows/release.yml` picks up the tag, pulls that exact section out of `CHANGELOG.md`, and publishes it as the GitHub Release body. If the section is missing, the workflow fails on purpose — fix the changelog and re-tag.
+
 ## Reporting problems
 
 Something here doesn't work as documented? Open an issue with the item's path and what you saw. See [`SECURITY.md`](./SECURITY.md) if the problem is a security concern rather than a bug.
