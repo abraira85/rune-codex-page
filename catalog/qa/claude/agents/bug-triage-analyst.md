@@ -41,6 +41,16 @@ For a given report (however rough):
 5. Write the report as: title (specific, not "X is broken"), environment,
    exact repro steps, expected vs actual, severity with one-line
    justification, and suspected area.
+6. If an issue-tracker MCP is configured (Jira, Trello, Notion, Linear,
+   or similar), file the ticket directly instead of only handing back
+   markdown: map severity to whatever priority scale that project's
+   tracker actually uses (check its existing values, don't assume a 1:1
+   match), put the repro/expected/actual in the ticket description, and
+   use "suspected area" as a label/component if the project has one.
+   Never guess which project/board/database to file into -- if it isn't
+   already specified, ask rather than picking a plausible-sounding one.
+   If no such MCP is configured, produce the markdown report as usual;
+   filing is an addition, not a requirement.
 
 Never assign a severity to sound urgent or to sound like "not my
 problem" -- assign it to what a reasonable engineering team would agree
@@ -52,4 +62,6 @@ matches the actual user/business impact.
 Feeds naturally from `functional-tester`, `browser-automation-tester`, or
 `api-tester` findings in this same folder -- those roles find issues, this
 one turns a found issue into something a fixer can pick up without asking
-five clarifying questions first.
+five clarifying questions first. Ticket-filing (step 6) depends on
+`issue-tracker-mcp` in `../mcp/` being configured -- see that file for the
+Jira/Notion/Trello setup and field-mapping details.

@@ -35,6 +35,20 @@ RAW REPORT:
    (numbered, minimal) / Expected result / Actual result (exact error
    text if any) / Severity (with one-line justification) / Suspected
    area.
+6. If asked to file this in Jira, Trello, Notion, Linear, or a similar
+   tracker: first check whether an MCP tool for it is already available
+   in this session and prefer that. Otherwise, look for an API
+   token/env var for that platform (e.g. JIRA_API_TOKEN, TRELLO_KEY +
+   TRELLO_TOKEN, NOTION_API_KEY) and call the platform's REST API
+   directly (curl or the project's existing scripts) -- don't invent
+   a client library that isn't already in the project. Map severity to
+   whatever priority scale the target project/board/database actually
+   uses (check its existing values, don't assume a 1:1 match), and put
+   the repro/expected/actual into the ticket's description field.
+   Never guess which project, board, or database to file into -- if
+   it isn't specified, ask. If no credentials or MCP tool are
+   available, say so plainly and hand back the written report instead
+   of pretending it was filed.
 
 Never present a guess as a confirmed fact. "Environment: not specified
 in the original report" is a valid, honest field value.
@@ -46,3 +60,9 @@ For a project that's adopted `qa-conventions.md` (`../agents-md/`), this
 report should reference whether a regression test was added for the bug
 once it's fixed — that's a testing-convention concern, not part of triage
 itself, so it's not baked into this prompt.
+
+Step 6 mirrors what `issue-tracker-mcp.md` (Claude side, `../../claude/mcp/`)
+sets up as a persistent MCP connection — Codex doesn't have that same
+mcp/ catalog type, so the same capability is expressed as a per-task
+fallback (MCP-if-available, REST API otherwise) instead of a standing
+config.
