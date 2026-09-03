@@ -35,6 +35,21 @@ context: "where and how it's actually used"
 
 Full format in [`TEMPLATE.md`](./TEMPLATE.md). Every PR is checked automatically by [`scripts/validate.py`](./scripts/validate.py) in CI — see the badge above.
 
+## `~ ❯ man install`
+
+No CLI, no package manager — copy what you need, it's just files.
+
+| Item type | Goes in your project as |
+|---|---|
+| `claude/agents/*.md` | `.claude/agents/<name>.md` |
+| `claude/skills/*.md` | `.claude/skills/<name>/SKILL.md` |
+| `claude/mcp/*.md` | the config block into your MCP client's config (e.g. `.mcp.json`, `claude_desktop_config.json`) |
+| `claude/hooks/*.md` | the hook block into `.claude/settings.json` |
+| `codex/agents-md/*.md` | your repo's root `AGENTS.md` |
+| `codex/prompts/*.md` | your Codex CLI / agent's custom-instruction config |
+
+Every item's body is the exact content to paste — the front-matter (`name`, `status`, `context`) is metadata for this repo, not part of what you copy.
+
 ## `~ ❯ man contributing`
 
 Contributions are welcome — this isn't a solo drop, it's meant to grow. Start with [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the workflow, [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) for how we treat each other, and [`SECURITY.md`](./SECURITY.md) if what you found is a security issue rather than a bug. Everyone who lands an item gets listed in [`CONTRIBUTORS.md`](./CONTRIBUTORS.md).
