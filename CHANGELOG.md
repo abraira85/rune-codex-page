@@ -104,3 +104,28 @@ mean for a repo of prompts rather than code.
   route to all nine new specialists and both smoke-check skills. QA team
   is now 19 agents/prompts, 4 skills, 3 MCP configs, and 1 hook, across
   Claude, Codex, and Antigravity
+- First item in `engineering/`, across all three tool tracks:
+  `code-reviewer` (Claude agent + Antigravity port) / `code-review`
+  (Codex prompt) -- real diff review (correctness, security sanity, test
+  coverage, readability) with severity-tagged findings (Blocking /
+  Should-fix / Nit), scoped to what actually changed. Deep security
+  review is explicitly deferred to a future `security/` role, not
+  duplicated here. `engineering/` also gets its `antigravity/` scaffold
+  (previously only `qa/` had one) and drops the now-redundant
+  `.gitkeep` placeholders in the folders that got real content
+- `engineering/` code-review team rounded out, all three tool tracks:
+  `code-reviewer` deepened significantly (diff-size sanity, error
+  handling/observability, AI-generated-code smells, documentation
+  checks, and hand-offs to the two new specialist roles instead of
+  covering their ground shallowly) and two new roles added --
+  `api-design-reviewer` / `api-design-review` (breaking-change risk,
+  versioning, and interface design for public API/schema changes) and
+  `dependency-reviewer` / `dependency-review` (necessity, license, and
+  known vulnerabilities for a dependency change, via real audit tooling)
+- `code-review-comment` (Claude + Antigravity skill, folded into the
+  Codex prompt): consistent finding format -- location, what's wrong,
+  why it matters, severity, suggestion -- shared across all three
+  reviewer roles
+- `vcs-review-mcp` (Claude + Antigravity): posts a review directly on a
+  real GitHub/GitLab PR/MR instead of only returning text; `code-review`
+  (Codex) gets the same MCP-if-available/REST-API-otherwise fallback
