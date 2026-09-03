@@ -23,6 +23,12 @@ Placement rules, by source path:
   .../codex/prompts/<slug>.md        -> printed only (no fixed destination --
                                          it goes wherever your agent's custom
                                          instructions config lives)
+  .../antigravity/agents/<slug>.md       -> <target>/.agents/agents/<slug>.md
+  .../antigravity/skills/<slug>/SKILL.md -> <target>/.agents/skills/<slug>/SKILL.md
+  .../antigravity/mcp/<slug>.md          -> printed only (merge into
+                                             .agents/mcp_config.json by hand)
+  .../antigravity/hooks/<slug>.md        -> printed only (merge into
+                                             .agents/hooks.json by hand)
 """
 import argparse
 import re
@@ -39,6 +45,8 @@ PROMPT_BLOCK_RE = re.compile(
     r"## Prompt / instructions\s*\n```[a-zA-Z]*\n(.*?)\n```", re.DOTALL
 )
 CLAUDE_FIELDS = ("name", "description", "tools", "model")
+ANTIGRAVITY_FIELDS = ("name", "description", "tools", "model", "mainAgent",
+                      "subagent", "commandExecutionPolicy", "mcpServers", "skills")
 
 
 def parse_item(path: Path):
@@ -55,9 +63,9 @@ def parse_item(path: Path):
     return data, prompt
 
 
-def claude_frontmatter(data: dict) -> str:
+def tool_frontmatter(data: dict, fields: tuple) -> str:
     lines = ["---"]
-    for key in CLAUDE_FIELDS:
+    for key in fields:
         if key in data and data[key] not in (None, [], ""):
             value = data[key]
             if isinstance(value, list):
@@ -65,6 +73,14 @@ def claude_frontmatter(data: dict) -> str:
             lines.append(f"{key}: {value}")
     lines.append("---")
     return "\n".join(lines) + "\n\n"
+
+
+def claude_frontmatter(data: dict) -> str:
+    return tool_frontmatter(data, CLAUDE_FIELDS)
+
+
+def antigravity_frontmatter(data: dict) -> str:
+    return tool_frontmatter(data, ANTIGRAVITY_FIELDS)
 
 
 def write_file(dest: Path, content: str, force: bool):
@@ -91,8 +107,9 @@ def main():
         sys.exit(f"Not a file: {src}")
 
     parts = src.parts
-    if "claude" not in parts and "codex" not in parts:
-        sys.exit(f"{src}: doesn't look like a catalog item (no claude/ or codex/ in path)")
+    if "claude" not in parts and "codex" not in parts and "antigravity" not in parts:
+        sys.exit(f"{src}: doesn't look like a catalog item "
+                  f"(no claude/, codex/, or antigravity/ in path)")
 
     data, prompt = parse_item(src)
 
@@ -123,7 +140,7 @@ def main():
         else:
             sys.exit(f"Unknown claude/ item type: {item_type}")
 
-    else:  # codex
+    elif "codex" in parts:
         tool_idx = parts.index("codex")
         item_type = parts[tool_idx + 1]  # agents-md | prompts
 
@@ -138,6 +155,32 @@ def main():
 
         else:
             sys.exit(f"Unknown codex/ item type: {item_type}")
+
+    else:  # antigravity
+        tool_idx = parts.index("antigravity")
+        item_type = parts[tool_idx + 1]  # agents | skills | mcp | hooks
+
+        if item_type == "agents":
+            dest = target / ".agents" / "agents" / f"{src.stem}.md"
+            write_file(dest, antigravity_frontmatter(data) + prompt, args.force)
+
+        elif item_type == "skills":
+            slug = parts[tool_idx + 2]  # .../skills/<slug>/SKILL.md
+            dest = target / ".agents" / "skills" / slug / "SKILL.md"
+            write_file(dest, antigravity_frontmatter(data) + prompt, args.force)
+
+        elif item_type in ("mcp", "hooks"):
+            label = "MCP server config" if item_type == "mcp" else "hook config"
+            print(f"# {label} -- not auto-installed (needs merging into JSON by hand)\n")
+            print(prompt)
+            if item_type == "mcp":
+                print("# Merge the relevant block into .agents/mcp_config.json "
+                      "(or ~/.gemini/config/mcp_config.json for a global server).")
+            else:
+                print("# Merge the relevant block into .agents/hooks.json.")
+
+        else:
+            sys.exit(f"Unknown antigravity/ item type: {item_type}")
 
 
 if __name__ == "__main__":

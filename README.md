@@ -7,7 +7,7 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-38BDF8.svg)](./CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/code_of_conduct-Contributor_Covenant-8B5CF6.svg)](./CODE_OF_CONDUCT.md)
 
-> Production-tested prompts, roles and configs for **Claude** and **Codex** — private by default, public when ready.
+> Production-tested prompts, roles and configs for **Claude**, **Codex**, and (piloting) **Antigravity** — private by default, public when ready.
 
 Everything here has actually been used somewhere real. Every item is tagged `production` or `experimental` — nothing ships just to pad the count.
 
@@ -25,7 +25,7 @@ Organized by **area** first — what you're looking for — then by tool and typ
 | [`business/`](./catalog/business) | Leadership, product, strategy |
 | [`qa/`](./catalog/qa) | Testing, quality assurance |
 
-Each area repeats the same pattern — `claude/{agents,skills,mcp,hooks}` and `codex/{agents-md,prompts}` — see [`catalog/README.md`](./catalog/README.md) for the full layout.
+Each area repeats the same pattern — `claude/{agents,skills,mcp,hooks}`, `codex/{agents-md,prompts}`, and (rolling out area by area, starting with `qa/`) `antigravity/{agents,skills,mcp,hooks}` — see [`catalog/README.md`](./catalog/README.md) for the full layout.
 
 ## `~ ❯ cat CONVENTIONS.md`
 
@@ -64,6 +64,10 @@ python3 scripts/install.py catalog/qa/claude/agents/qa-lead.md --target ../my-pr
 | `<area>/claude/hooks/*.md` | prints only — same reasoning |
 | `<area>/codex/agents-md/*.md` | writes `AGENTS.md` at the target root (refuses to overwrite an existing one without `--force`) |
 | `<area>/codex/prompts/*.md` | prints only — no fixed destination |
+| `<area>/antigravity/agents/*.md` | writes `.agents/agents/<name>.md` |
+| `<area>/antigravity/skills/*/SKILL.md` | writes `.agents/skills/<name>/SKILL.md` |
+| `<area>/antigravity/mcp/*.md` | prints only — merge into `.agents/mcp_config.json` by hand |
+| `<area>/antigravity/hooks/*.md` | prints only — merge into `.agents/hooks.json` by hand |
 
 It never overwrites an existing file silently. Prefer doing it by hand?
 Every catalog file still reads fine on its own — the front-matter (`name`,

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate front-matter on every item under claude/ and codex/.
+"""Validate front-matter on every item under claude/, codex/, and antigravity/.
 
 Runs in CI on every push/PR (see .github/workflows/validate.yml) and can be
 run locally with `python3 scripts/validate.py` before opening a PR.
@@ -17,7 +17,9 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = "catalog"
 AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa"]
 TOOL_TYPES = ["claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
-              "codex/agents-md", "codex/prompts"]
+              "codex/agents-md", "codex/prompts",
+              "antigravity/agents", "antigravity/skills", "antigravity/mcp",
+              "antigravity/hooks"]
 ITEM_DIRS = [f"{CATALOG}/{area}/{t}" for area in AREAS for t in TOOL_TYPES]
 SKIP_FILES = {"README.md", ".gitkeep"}
 REQUIRED_KEYS = {"name", "status", "context"}

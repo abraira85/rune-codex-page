@@ -23,9 +23,19 @@ Inside each area, the same pattern repeats:
 │   ├── skills/       Reusable Claude Skills
 │   ├── mcp/          MCP server configs
 │   └── hooks/        Claude Code hook configs
-└── codex/
-    ├── agents-md/    AGENTS.md templates
-    └── prompts/      Standalone Codex CLI / custom-instruction prompts
+├── codex/
+│   ├── agents-md/    AGENTS.md templates
+│   └── prompts/      Standalone Codex CLI / custom-instruction prompts
+└── antigravity/
+    ├── agents/       Google Antigravity custom subagent definitions
+    ├── skills/       Antigravity Agent Skills
+    ├── mcp/          MCP server configs (.agents/mcp_config.json shape)
+    └── hooks/        Antigravity hooks.json configs
 ```
+
+`antigravity/` is new and rolling out area by area rather than all at
+once — check an area's own README for what's actually there before
+assuming the full tree exists; `qa/` is the first area with it filled
+in.
 
 See [`../TEMPLATE.md`](../TEMPLATE.md) for the item format.
