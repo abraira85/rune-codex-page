@@ -36,6 +36,12 @@ test case matrix:
 5. Order cases by risk: highest-impact happy-path and negative cases
    first, cosmetic edge cases last, so a time-constrained tester knows
    what to run first.
+6. If a test-management MCP is configured (`../../mcp/test-management-mcp.md`),
+   sync the matrix there: create or update each case (match on
+   title/external-ID first so re-running this doesn't create
+   duplicates), don't invent which project/suite/section to file into --
+   ask if it isn't specified. Otherwise, output the matrix only; syncing
+   is an addition, not a requirement.
 
 Output as a markdown table: ID | Title | Preconditions | Steps | Expected.
 ```
@@ -44,3 +50,7 @@ Output as a markdown table: ID | Title | Preconditions | Steps | Expected.
 
 Pairs naturally with the `functional-tester` and `browser-automation-tester`
 agents in `../../agents/` — this skill produces the case list, they execute it.
+Syncing (step 6) depends on `test-management-mcp` in `../../mcp/` being
+configured — that file is more speculative than the others in this
+folder about what's actually available; check it before assuming a
+sync target exists.
