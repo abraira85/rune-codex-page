@@ -1,0 +1,43 @@
+name: Propose a new item
+description: Suggest a prompt, agent, skill, MCP config or AGENTS.md template to add.
+labels: ["new item"]
+body:
+  - type: dropdown
+    id: target
+    attributes:
+      label: Target
+      options:
+        - claude/agents
+        - claude/skills
+        - claude/mcp
+        - claude/hooks
+        - codex/agents-md
+        - codex/prompts
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Is this actually running somewhere real, or still being tested?
+      options:
+        - production
+        - experimental
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Real-use context
+      description: Where and how has this actually been used? One or two sentences.
+      placeholder: "Used in production at X to review every backend PR before merge."
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: Content
+      description: Paste the prompt / agent definition / AGENTS.md / config itself.
+      render: markdown
+    validations:
+      required: true
