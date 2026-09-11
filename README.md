@@ -1,4 +1,4 @@
-<p align="center"><img src="./assets/hero.svg" width="100%" alt="Terminal session: whoami, ls, and cat TEMPLATE.md — rune-codex-page, production-tested prompts, roles and configs for Claude and Codex. claude/ (agents, skills, mcp, hooks) and codex/ (agents-md, prompts). Every item tagged status production or experimental with a real-use context."></p>
+<p align="center"><img src="./assets/hero.svg" width="100%" alt="Terminal session: whoami, ls, and cat TEMPLATE.md — rune-codex-page, production-tested prompts, roles and configs for Claude, Codex, and Antigravity. claude/ (agents, skills, mcp, hooks), codex/ (agents-md, prompts), and antigravity/ (agents, skills, mcp, hooks). Every item tagged status production or experimental with a real-use context."></p>
 
 # rune codex page
 

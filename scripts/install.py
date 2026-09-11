@@ -7,10 +7,10 @@
 
 This does NOT just copy the file. Items in this repo carry catalog-only
 metadata (status, context, a "## Notes" section) that isn't part of what
-Claude/Codex actually reads. This script extracts the real payload --
+Claude/Codex/Antigravity actually reads. This script extracts the real payload --
 front-matter fields a tool understands (name, description, tools, model)
-plus the fenced block under "## Prompt / instructions" -- and writes (or
-prints) it in the shape the target tool expects.
+plus the content under "## Prompt / instructions" -- and writes (or prints)
+it in the shape the target tool expects.
 
 Placement rules, by source path:
   .../claude/agents/<slug>.md        -> <target>/.claude/agents/<slug>.md
@@ -41,12 +41,36 @@ except ImportError:
     sys.exit("Missing dependency: pip install -r scripts/requirements.txt")
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
-PROMPT_BLOCK_RE = re.compile(
-    r"## Prompt / instructions\s*\n```[a-zA-Z]*\n(.*?)\n```", re.DOTALL
-)
+FENCED_BLOCK_RE = re.compile(r"```[a-zA-Z0-9_-]*\n(.*?)\n```", re.DOTALL)
 CLAUDE_FIELDS = ("name", "description", "tools", "model")
 ANTIGRAVITY_FIELDS = ("name", "description", "tools", "model", "mainAgent",
                       "subagent", "commandExecutionPolicy", "mcpServers", "skills")
+
+
+def extract_prompt_section(body: str, path: Path) -> str:
+    lines = body.splitlines()
+    start = None
+    for idx, line in enumerate(lines):
+        if line.strip() == "## Prompt / instructions":
+            start = idx + 1
+            break
+    if start is None:
+        sys.exit(f"{path}: couldn't find a '## Prompt / instructions' section")
+
+    section = []
+    in_fence = False
+    for line in lines[start:]:
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+        if not in_fence and line.startswith("## "):
+            break
+        section.append(line)
+
+    prompt_section = "\n".join(section).strip()
+    if not prompt_section:
+        sys.exit(f"{path}: empty '## Prompt / instructions' section")
+    return prompt_section + "\n"
 
 
 def parse_item(path: Path):
@@ -56,11 +80,11 @@ def parse_item(path: Path):
         sys.exit(f"{path}: missing front-matter, can't install")
     data = yaml.safe_load(m.group(1)) or {}
 
-    body_m = PROMPT_BLOCK_RE.search(m.group(2))
-    if not body_m:
-        sys.exit(f"{path}: couldn't find a '## Prompt / instructions' code block")
-    prompt = body_m.group(1).strip() + "\n"
-    return data, prompt
+    prompt_section = extract_prompt_section(m.group(2), path)
+
+    block_m = FENCED_BLOCK_RE.search(prompt_section)
+    prompt_block = (block_m.group(1).strip() if block_m else prompt_section.strip()) + "\n"
+    return data, prompt_block, prompt_section
 
 
 def tool_frontmatter(data: dict, fields: tuple) -> str:
@@ -111,7 +135,7 @@ def main():
         sys.exit(f"{src}: doesn't look like a catalog item "
                   f"(no claude/, codex/, or antigravity/ in path)")
 
-    data, prompt = parse_item(src)
+    data, prompt, prompt_section = parse_item(src)
 
     if "claude" in parts:
         tool_idx = parts.index("claude")
@@ -129,7 +153,7 @@ def main():
         elif item_type in ("mcp", "hooks"):
             label = "MCP server config" if item_type == "mcp" else "hook config"
             print(f"# {label} -- not auto-installed (needs merging into JSON by hand)\n")
-            print(prompt)
+            print(prompt_section)
             if item_type == "mcp":
                 print("# Merge the relevant block into your MCP client config "
                       "(.mcp.json, claude_desktop_config.json, etc.)")
@@ -172,7 +196,7 @@ def main():
         elif item_type in ("mcp", "hooks"):
             label = "MCP server config" if item_type == "mcp" else "hook config"
             print(f"# {label} -- not auto-installed (needs merging into JSON by hand)\n")
-            print(prompt)
+            print(prompt_section)
             if item_type == "mcp":
                 print("# Merge the relevant block into .agents/mcp_config.json "
                       "(or ~/.gemini/config/mcp_config.json for a global server).")
