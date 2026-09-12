@@ -15,7 +15,7 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = "catalog"
-AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa"]
+AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa", "design-ux", "content", "legal"]
 TOOL_TYPES = ["claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
               "codex/agents-md", "codex/prompts",
               "antigravity/agents", "antigravity/skills", "antigravity/mcp",

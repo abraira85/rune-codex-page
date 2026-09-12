@@ -82,9 +82,9 @@ Releases follow [Semantic Versioning](https://semver.org/) and are tracked in [`
 
 ## `~ ❯ roadmap`
 
-- [x] First real items in the catalog (`qa/` team: 6 agents, 2 skills)
-- [ ] A generated `index.json` so the catalog is machine-readable
-- [ ] Tagged `v0.1.0` once there's enough here to call a first release
+- [x] First real items in the catalog (`qa/` team: 19 agents, 4 skills, 3 MCP, 1 hook)
+- [x] A generated `index.json` so the catalog is machine-readable
+- [x] Tagged `v0.1.0` once there's enough here to call a first release
 
 ## `~ ❯ whoami`
 

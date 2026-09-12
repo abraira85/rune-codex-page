@@ -1,0 +1,4844 @@
+[
+  {
+    "id": "engineering/claude/agents/api-client-generator",
+    "name": "api-client-generator",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Generates typed SDKs and clients from real schemas (OpenAPI/GraphQL).",
+    "file": "catalog/engineering/claude/agents/api-client-generator.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/api-design-reviewer",
+    "name": "api-design-reviewer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run against a real API change. Move to production once it's caught a real breaking change before it shipped.",
+    "description": "Use when a diff changes a public interface -- a REST/GraphQL API, a library's public functions/types, an event schema -- and needs review for breaking changes, versioning, and interface design, not just implementation correctness.",
+    "file": "catalog/engineering/claude/agents/api-design-reviewer.md",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/backend-architect",
+    "name": "backend-architect",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Focuses on service boundaries, database schemas, and system-level API design.",
+    "file": "catalog/engineering/claude/agents/backend-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/build-system-engineer",
+    "name": "build-system-engineer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Manages bundler/build-tool configs, monorepo graphs, and build-time regressions.",
+    "file": "catalog/engineering/claude/agents/build-system-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/code-reviewer",
+    "name": "code-reviewer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run against a real PR. Move to production once it's caught a real bug or bad pattern before merge.",
+    "description": "Use when a diff/PR needs a real code review -- correctness, security sanity, readability, and test coverage -- before merge, not a rubber stamp.",
+    "file": "catalog/engineering/claude/agents/code-reviewer.md",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/codebase-onboarding-guide",
+    "name": "codebase-onboarding-guide",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Generates a tour/onboarding document for an unfamiliar codebase.",
+    "file": "catalog/engineering/claude/agents/codebase-onboarding-guide.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/debugging-specialist",
+    "name": "debugging-specialist",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version. Complement to code-reviewer.",
+    "description": "Use when you have a bug or failure and need to find the actual code-level root cause, not just reproduce it.",
+    "file": "catalog/engineering/claude/agents/debugging-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/dependency-reviewer",
+    "name": "dependency-reviewer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run against a real dependency change. Move to production once it's caught a real vulnerable/unnecessary dependency before it shipped.",
+    "description": "Use when a diff adds, removes, or upgrades a dependency -- checks necessity, license compatibility, known vulnerabilities, and version-pinning discipline using real tooling, not a guess from the package name.",
+    "file": "catalog/engineering/claude/agents/dependency-reviewer.md",
+    "tools": [
+      "Read",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/documentation-writer",
+    "name": "documentation-writer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes and maintains READMEs, API docs, docstrings, and migration guides.",
+    "file": "catalog/engineering/claude/agents/documentation-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/frontend-architect",
+    "name": "frontend-architect",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Focuses on component architecture, state management, and design system consistency.",
+    "file": "catalog/engineering/claude/agents/frontend-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/git-workflow-specialist",
+    "name": "git-workflow-specialist",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Assists with branch strategy, commit message quality, and merge conflicts.",
+    "file": "catalog/engineering/claude/agents/git-workflow-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/legacy-code-modernizer",
+    "name": "legacy-code-modernizer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Specializes in modernizing old, undocumented code using techniques like the Strangler Fig pattern.",
+    "file": "catalog/engineering/claude/agents/legacy-code-modernizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/migration-upgrade-specialist",
+    "name": "migration-upgrade-specialist",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Handles framework or language major-version upgrades and breaking changes.",
+    "file": "catalog/engineering/claude/agents/migration-upgrade-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/performance-optimizer",
+    "name": "performance-optimizer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes code for performance bottlenecks, algorithmic complexity, and inefficient query patterns.",
+    "file": "catalog/engineering/claude/agents/performance-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/refactoring-specialist",
+    "name": "refactoring-specialist",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Proactively restructures code without changing behavior to improve maintainability and readability.",
+    "file": "catalog/engineering/claude/agents/refactoring-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/tech-lead",
+    "name": "tech-lead",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Orchestrates the engineering team. Scopes features, decides technical approach and delegates to specialists.",
+    "file": "catalog/engineering/claude/agents/tech-lead.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/agents/technical-debt-tracker",
+    "name": "technical-debt-tracker",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Systematically catalogs and prioritizes technical debt across the codebase.",
+    "file": "catalog/engineering/claude/agents/technical-debt-tracker.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "engineering/claude/skills/SKILL",
+    "name": "adr-writer",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Architecture Decision Record (ADR) template and writing guide.",
+    "file": "catalog/engineering/claude/skills/adr-writer/SKILL.md"
+  },
+  {
+    "id": "engineering/claude/skills/SKILL",
+    "name": "code-review-comment",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run against a real PR.",
+    "description": "Format a single code review finding consistently -- location, what's wrong, why it matters, severity, and a concrete suggestion -- so every finding from every reviewer role reads the same way.",
+    "file": "catalog/engineering/claude/skills/code-review-comment/SKILL.md"
+  },
+  {
+    "id": "engineering/claude/skills/SKILL",
+    "name": "feature-scoping-template",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Template for breaking a feature request into a technical plan.",
+    "file": "catalog/engineering/claude/skills/feature-scoping-template/SKILL.md"
+  },
+  {
+    "id": "engineering/claude/skills/SKILL",
+    "name": "onboarding-doc-template",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent structure for codebase-onboarding-guide's output.",
+    "file": "catalog/engineering/claude/skills/onboarding-doc-template/SKILL.md"
+  },
+  {
+    "id": "engineering/claude/skills/SKILL",
+    "name": "tech-debt-ticket-template",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent write-up for a tracked tech-debt item.",
+    "file": "catalog/engineering/claude/skills/tech-debt-ticket-template/SKILL.md"
+  },
+  {
+    "id": "engineering/claude/mcp/code-search-mcp",
+    "name": "code-search-mcp",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sourcegraph-style code search for large codebases.",
+    "file": "catalog/engineering/claude/mcp/code-search-mcp.md"
+  },
+  {
+    "id": "engineering/claude/mcp/vcs-review-mcp",
+    "name": "vcs-review-mcp",
+    "area": "engineering",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet used against a real GitHub/GitLab PR. Move to production once it's actually posted a review that stuck.",
+    "description": "Wires a GitHub/GitLab MCP server into Claude so code-reviewer, api-design-reviewer, and dependency-reviewer can post review comments directly on the real PR/MR instead of only returning text.",
+    "file": "catalog/engineering/claude/mcp/vcs-review-mcp.md"
+  },
+  {
+    "id": "engineering/codex/prompts/api-client-generator",
+    "name": "api-client-generator",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/api-client-generator.md"
+  },
+  {
+    "id": "engineering/codex/prompts/api-design-review",
+    "name": "api-design-review",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/api-design-review.md"
+  },
+  {
+    "id": "engineering/codex/prompts/backend-architect",
+    "name": "backend-architect",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/backend-architect.md"
+  },
+  {
+    "id": "engineering/codex/prompts/build-system-engineer",
+    "name": "build-system-engineer",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/build-system-engineer.md"
+  },
+  {
+    "id": "engineering/codex/prompts/code-review",
+    "name": "code-review",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/code-review.md"
+  },
+  {
+    "id": "engineering/codex/prompts/codebase-onboarding-guide",
+    "name": "codebase-onboarding-guide",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/codebase-onboarding-guide.md"
+  },
+  {
+    "id": "engineering/codex/prompts/debugging-specialist",
+    "name": "debugging-specialist",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version. Complement to code-reviewer.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/debugging-specialist.md"
+  },
+  {
+    "id": "engineering/codex/prompts/dependency-review",
+    "name": "dependency-review",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's engineering team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/dependency-review.md"
+  },
+  {
+    "id": "engineering/codex/prompts/documentation-writer",
+    "name": "documentation-writer",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/documentation-writer.md"
+  },
+  {
+    "id": "engineering/codex/prompts/frontend-architect",
+    "name": "frontend-architect",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/frontend-architect.md"
+  },
+  {
+    "id": "engineering/codex/prompts/git-workflow-specialist",
+    "name": "git-workflow-specialist",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/git-workflow-specialist.md"
+  },
+  {
+    "id": "engineering/codex/prompts/legacy-code-modernizer",
+    "name": "legacy-code-modernizer",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/legacy-code-modernizer.md"
+  },
+  {
+    "id": "engineering/codex/prompts/migration-upgrade-specialist",
+    "name": "migration-upgrade-specialist",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/migration-upgrade-specialist.md"
+  },
+  {
+    "id": "engineering/codex/prompts/performance-optimizer",
+    "name": "performance-optimizer",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/performance-optimizer.md"
+  },
+  {
+    "id": "engineering/codex/prompts/refactoring-specialist",
+    "name": "refactoring-specialist",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/refactoring-specialist.md"
+  },
+  {
+    "id": "engineering/codex/prompts/tech-lead",
+    "name": "tech-lead",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/tech-lead.md"
+  },
+  {
+    "id": "engineering/codex/prompts/technical-debt-tracker",
+    "name": "technical-debt-tracker",
+    "area": "engineering",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "",
+    "file": "catalog/engineering/codex/prompts/technical-debt-tracker.md"
+  },
+  {
+    "id": "engineering/antigravity/agents/api-client-generator",
+    "name": "api-client-generator",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Generates typed SDKs and clients from real schemas (OpenAPI/GraphQL).",
+    "file": "catalog/engineering/antigravity/agents/api-client-generator.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/api-design-reviewer",
+    "name": "api-design-reviewer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude api-design-reviewer agent (../../claude/agents/api-design-reviewer.md) — not yet run against a real API change.",
+    "description": "Use when a diff changes a public interface -- a REST/GraphQL API, a library's public functions/types, an event schema -- and needs review for breaking changes, versioning, and interface design, not just implementation correctness.",
+    "file": "catalog/engineering/antigravity/agents/api-design-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/backend-architect",
+    "name": "backend-architect",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Focuses on service boundaries, database schemas, and system-level API design.",
+    "file": "catalog/engineering/antigravity/agents/backend-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/build-system-engineer",
+    "name": "build-system-engineer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Manages bundler/build-tool configs, monorepo graphs, and build-time regressions.",
+    "file": "catalog/engineering/antigravity/agents/build-system-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/code-reviewer",
+    "name": "code-reviewer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude code-reviewer agent (../../claude/agents/code-reviewer.md) — not yet run against a real PR.",
+    "description": "Use when a diff/PR needs a real code review -- correctness, security sanity, readability, and test coverage -- before merge, not a rubber stamp.",
+    "file": "catalog/engineering/antigravity/agents/code-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/codebase-onboarding-guide",
+    "name": "codebase-onboarding-guide",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Generates a tour/onboarding document for an unfamiliar codebase.",
+    "file": "catalog/engineering/antigravity/agents/codebase-onboarding-guide.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/debugging-specialist",
+    "name": "debugging-specialist",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version. Complement to code-reviewer.",
+    "description": "Use when you have a bug or failure and need to find the actual code-level root cause, not just reproduce it.",
+    "file": "catalog/engineering/antigravity/agents/debugging-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/dependency-reviewer",
+    "name": "dependency-reviewer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude dependency-reviewer agent (../../claude/agents/dependency-reviewer.md) — not yet run against a real dependency change.",
+    "description": "Use when a diff adds, removes, or upgrades a dependency -- checks necessity, license compatibility, known vulnerabilities, and version-pinning discipline using real tooling, not a guess from the package name.",
+    "file": "catalog/engineering/antigravity/agents/dependency-reviewer.md",
+    "tools": [
+      "view_file",
+      "run_command",
+      "grep_search",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/documentation-writer",
+    "name": "documentation-writer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes and maintains READMEs, API docs, docstrings, and migration guides.",
+    "file": "catalog/engineering/antigravity/agents/documentation-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/frontend-architect",
+    "name": "frontend-architect",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Focuses on component architecture, state management, and design system consistency.",
+    "file": "catalog/engineering/antigravity/agents/frontend-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/git-workflow-specialist",
+    "name": "git-workflow-specialist",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Assists with branch strategy, commit message quality, and merge conflicts.",
+    "file": "catalog/engineering/antigravity/agents/git-workflow-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/legacy-code-modernizer",
+    "name": "legacy-code-modernizer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Specializes in modernizing old, undocumented code using techniques like the Strangler Fig pattern.",
+    "file": "catalog/engineering/antigravity/agents/legacy-code-modernizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/migration-upgrade-specialist",
+    "name": "migration-upgrade-specialist",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Handles framework or language major-version upgrades and breaking changes.",
+    "file": "catalog/engineering/antigravity/agents/migration-upgrade-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/performance-optimizer",
+    "name": "performance-optimizer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes code for performance bottlenecks, algorithmic complexity, and inefficient query patterns.",
+    "file": "catalog/engineering/antigravity/agents/performance-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/refactoring-specialist",
+    "name": "refactoring-specialist",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Proactively restructures code without changing behavior to improve maintainability and readability.",
+    "file": "catalog/engineering/antigravity/agents/refactoring-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/tech-lead",
+    "name": "tech-lead",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Orchestrates the engineering team. Scopes features, decides technical approach and delegates to specialists.",
+    "file": "catalog/engineering/antigravity/agents/tech-lead.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/agents/technical-debt-tracker",
+    "name": "technical-debt-tracker",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Systematically catalogs and prioritizes technical debt across the codebase.",
+    "file": "catalog/engineering/antigravity/agents/technical-debt-tracker.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "engineering/antigravity/skills/SKILL",
+    "name": "adr-writer",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Architecture Decision Record (ADR) template and writing guide.",
+    "file": "catalog/engineering/antigravity/skills/adr-writer/SKILL.md"
+  },
+  {
+    "id": "engineering/antigravity/skills/SKILL",
+    "name": "code-review-comment",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Ported from the Claude code-review-comment skill (../../../claude/skills/code-review-comment/SKILL.md) — not yet run against a real PR.",
+    "description": "Format a single code review finding consistently -- location, what's wrong, why it matters, severity, and a concrete suggestion -- so every finding from every reviewer role reads the same way.",
+    "file": "catalog/engineering/antigravity/skills/code-review-comment/SKILL.md"
+  },
+  {
+    "id": "engineering/antigravity/skills/SKILL",
+    "name": "feature-scoping-template",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Template for breaking a feature request into a technical plan.",
+    "file": "catalog/engineering/antigravity/skills/feature-scoping-template/SKILL.md"
+  },
+  {
+    "id": "engineering/antigravity/skills/SKILL",
+    "name": "onboarding-doc-template",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent structure for codebase-onboarding-guide's output.",
+    "file": "catalog/engineering/antigravity/skills/onboarding-doc-template/SKILL.md"
+  },
+  {
+    "id": "engineering/antigravity/skills/SKILL",
+    "name": "tech-debt-ticket-template",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent write-up for a tracked tech-debt item.",
+    "file": "catalog/engineering/antigravity/skills/tech-debt-ticket-template/SKILL.md"
+  },
+  {
+    "id": "engineering/antigravity/mcp/code-search-mcp",
+    "name": "code-search-mcp",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sourcegraph-style code search for large codebases.",
+    "file": "catalog/engineering/antigravity/mcp/code-search-mcp.md"
+  },
+  {
+    "id": "engineering/antigravity/mcp/vcs-review-mcp",
+    "name": "vcs-review-mcp",
+    "area": "engineering",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Ported from the Claude vcs-review-mcp config (../../claude/mcp/vcs-review-mcp.md) — not yet used against a real GitHub/GitLab PR.",
+    "description": "Wires a GitHub/GitLab MCP server into Antigravity so code-reviewer, api-design-reviewer, and dependency-reviewer can post review comments directly on the real PR/MR instead of only returning text.",
+    "file": "catalog/engineering/antigravity/mcp/vcs-review-mcp.md"
+  },
+  {
+    "id": "database/claude/agents/backup-recovery-specialist",
+    "name": "backup-recovery-specialist",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup strategy and tested restore procedures specific to databases.",
+    "file": "catalog/database/claude/agents/backup-recovery-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/capacity-planner",
+    "name": "capacity-planner",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sharding/partitioning strategy for a dataset approaching real scale limits.",
+    "file": "catalog/database/claude/agents/capacity-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/database-reviewer",
+    "name": "database-reviewer",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews a schema-change PR specifically (index strategy, migration safety).",
+    "file": "catalog/database/claude/agents/database-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/migration-author",
+    "name": "migration-author",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes an actual migration script safely (backward-compatible).",
+    "file": "catalog/database/claude/agents/migration-author.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/query-optimizer",
+    "name": "query-optimizer",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes slow queries against real EXPLAIN output.",
+    "file": "catalog/database/claude/agents/query-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/replication-specialist",
+    "name": "replication-specialist",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Read-replica setup and replication-lag troubleshooting.",
+    "file": "catalog/database/claude/agents/replication-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/agents/schema-designer",
+    "name": "schema-designer",
+    "area": "database",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data modeling for a new feature (normalization, indexing strategy).",
+    "file": "catalog/database/claude/agents/schema-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "database/claude/skills/SKILL",
+    "name": "migration-safety-checklist",
+    "area": "database",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backward-compatibility and reversibility checklist.",
+    "file": "catalog/database/claude/skills/migration-safety-checklist/SKILL.md"
+  },
+  {
+    "id": "database/claude/mcp/database-mcp",
+    "name": "database-mcp",
+    "area": "database",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Run real EXPLAIN plans and schema introspection.",
+    "file": "catalog/database/claude/mcp/database-mcp.md"
+  },
+  {
+    "id": "database/codex/prompts/backup-recovery-specialist",
+    "name": "backup-recovery-specialist",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup strategy and tested restore procedures specific to databases.",
+    "file": "catalog/database/codex/prompts/backup-recovery-specialist.md"
+  },
+  {
+    "id": "database/codex/prompts/capacity-planner",
+    "name": "capacity-planner",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sharding/partitioning strategy for a dataset approaching real scale limits.",
+    "file": "catalog/database/codex/prompts/capacity-planner.md"
+  },
+  {
+    "id": "database/codex/prompts/database-reviewer",
+    "name": "database-reviewer",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews a schema-change PR specifically (index strategy, migration safety).",
+    "file": "catalog/database/codex/prompts/database-reviewer.md"
+  },
+  {
+    "id": "database/codex/prompts/migration-author",
+    "name": "migration-author",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes an actual migration script safely (backward-compatible).",
+    "file": "catalog/database/codex/prompts/migration-author.md"
+  },
+  {
+    "id": "database/codex/prompts/query-optimizer",
+    "name": "query-optimizer",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes slow queries against real EXPLAIN output.",
+    "file": "catalog/database/codex/prompts/query-optimizer.md"
+  },
+  {
+    "id": "database/codex/prompts/replication-specialist",
+    "name": "replication-specialist",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Read-replica setup and replication-lag troubleshooting.",
+    "file": "catalog/database/codex/prompts/replication-specialist.md"
+  },
+  {
+    "id": "database/codex/prompts/schema-designer",
+    "name": "schema-designer",
+    "area": "database",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data modeling for a new feature (normalization, indexing strategy).",
+    "file": "catalog/database/codex/prompts/schema-designer.md"
+  },
+  {
+    "id": "database/antigravity/agents/backup-recovery-specialist",
+    "name": "backup-recovery-specialist",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup strategy and tested restore procedures specific to databases.",
+    "file": "catalog/database/antigravity/agents/backup-recovery-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/capacity-planner",
+    "name": "capacity-planner",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sharding/partitioning strategy for a dataset approaching real scale limits.",
+    "file": "catalog/database/antigravity/agents/capacity-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/database-reviewer",
+    "name": "database-reviewer",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews a schema-change PR specifically (index strategy, migration safety).",
+    "file": "catalog/database/antigravity/agents/database-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/migration-author",
+    "name": "migration-author",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes an actual migration script safely (backward-compatible).",
+    "file": "catalog/database/antigravity/agents/migration-author.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/query-optimizer",
+    "name": "query-optimizer",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes slow queries against real EXPLAIN output.",
+    "file": "catalog/database/antigravity/agents/query-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/replication-specialist",
+    "name": "replication-specialist",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Read-replica setup and replication-lag troubleshooting.",
+    "file": "catalog/database/antigravity/agents/replication-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/agents/schema-designer",
+    "name": "schema-designer",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data modeling for a new feature (normalization, indexing strategy).",
+    "file": "catalog/database/antigravity/agents/schema-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "database/antigravity/skills/SKILL",
+    "name": "migration-safety-checklist",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backward-compatibility and reversibility checklist.",
+    "file": "catalog/database/antigravity/skills/migration-safety-checklist/SKILL.md"
+  },
+  {
+    "id": "database/antigravity/mcp/database-mcp",
+    "name": "database-mcp",
+    "area": "database",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Run real EXPLAIN plans and schema introspection.",
+    "file": "catalog/database/antigravity/mcp/database-mcp.md"
+  },
+  {
+    "id": "devops/claude/agents/ci-pipeline-engineer",
+    "name": "ci-pipeline-engineer",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes and maintains CI/CD pipeline configs.",
+    "file": "catalog/devops/claude/agents/ci-pipeline-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/cost-optimizer",
+    "name": "cost-optimizer",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes real cloud billing/usage data for waste.",
+    "file": "catalog/devops/claude/agents/cost-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/disaster-recovery-planner",
+    "name": "disaster-recovery-planner",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup/restore strategy and DR-drill design.",
+    "file": "catalog/devops/claude/agents/disaster-recovery-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/feature-flag-manager",
+    "name": "feature-flag-manager",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Rollout/kill-switch strategy and execution for a staged release.",
+    "file": "catalog/devops/claude/agents/feature-flag-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/iac-reviewer",
+    "name": "iac-reviewer",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terraform/CloudFormation/Pulumi review for correctness and cost.",
+    "file": "catalog/devops/claude/agents/iac-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/incident-responder",
+    "name": "incident-responder",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "General production incident response: triage, mitigation, resolution.",
+    "file": "catalog/devops/claude/agents/incident-responder.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/kubernetes-specialist",
+    "name": "kubernetes-specialist",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Cluster config review: resource requests/limits, autoscaling, PDBs.",
+    "file": "catalog/devops/claude/agents/kubernetes-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/observability-engineer",
+    "name": "observability-engineer",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sets up/reviews logging, metrics, and tracing coverage.",
+    "file": "catalog/devops/claude/agents/observability-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/release-manager",
+    "name": "release-manager",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Orchestrates an actual deployment and owns the rollback decision.",
+    "file": "catalog/devops/claude/agents/release-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/agents/secrets-management-specialist",
+    "name": "secrets-management-specialist",
+    "area": "devops",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vault/secrets-rotation setup (the execution side).",
+    "file": "catalog/devops/claude/agents/secrets-management-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "devops/claude/skills/SKILL",
+    "name": "dr-drill-checklist",
+    "area": "devops",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "What a real DR drill needs to verify to count as done.",
+    "file": "catalog/devops/claude/skills/dr-drill-checklist/SKILL.md"
+  },
+  {
+    "id": "devops/claude/skills/SKILL",
+    "name": "postmortem-template",
+    "area": "devops",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Blameless incident postmortem format.",
+    "file": "catalog/devops/claude/skills/postmortem-template/SKILL.md"
+  },
+  {
+    "id": "devops/claude/skills/SKILL",
+    "name": "runbook-template",
+    "area": "devops",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent on-call runbook format for a specific failure mode.",
+    "file": "catalog/devops/claude/skills/runbook-template/SKILL.md"
+  },
+  {
+    "id": "devops/claude/mcp/cloud-provider-mcp",
+    "name": "cloud-provider-mcp",
+    "area": "devops",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Query real infra state from AWS/GCP/Azure.",
+    "file": "catalog/devops/claude/mcp/cloud-provider-mcp.md"
+  },
+  {
+    "id": "devops/claude/mcp/observability-mcp",
+    "name": "observability-mcp",
+    "area": "devops",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Datadog, Grafana, or Prometheus integration.",
+    "file": "catalog/devops/claude/mcp/observability-mcp.md"
+  },
+  {
+    "id": "devops/codex/prompts/ci-pipeline-engineer",
+    "name": "ci-pipeline-engineer",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes and maintains CI/CD pipeline configs.",
+    "file": "catalog/devops/codex/prompts/ci-pipeline-engineer.md"
+  },
+  {
+    "id": "devops/codex/prompts/cost-optimizer",
+    "name": "cost-optimizer",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes real cloud billing/usage data for waste.",
+    "file": "catalog/devops/codex/prompts/cost-optimizer.md"
+  },
+  {
+    "id": "devops/codex/prompts/disaster-recovery-planner",
+    "name": "disaster-recovery-planner",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup/restore strategy and DR-drill design.",
+    "file": "catalog/devops/codex/prompts/disaster-recovery-planner.md"
+  },
+  {
+    "id": "devops/codex/prompts/feature-flag-manager",
+    "name": "feature-flag-manager",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Rollout/kill-switch strategy and execution for a staged release.",
+    "file": "catalog/devops/codex/prompts/feature-flag-manager.md"
+  },
+  {
+    "id": "devops/codex/prompts/iac-reviewer",
+    "name": "iac-reviewer",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terraform/CloudFormation/Pulumi review for correctness and cost.",
+    "file": "catalog/devops/codex/prompts/iac-reviewer.md"
+  },
+  {
+    "id": "devops/codex/prompts/incident-responder",
+    "name": "incident-responder",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "General production incident response: triage, mitigation, resolution.",
+    "file": "catalog/devops/codex/prompts/incident-responder.md"
+  },
+  {
+    "id": "devops/codex/prompts/kubernetes-specialist",
+    "name": "kubernetes-specialist",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Cluster config review: resource requests/limits, autoscaling, PDBs.",
+    "file": "catalog/devops/codex/prompts/kubernetes-specialist.md"
+  },
+  {
+    "id": "devops/codex/prompts/observability-engineer",
+    "name": "observability-engineer",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sets up/reviews logging, metrics, and tracing coverage.",
+    "file": "catalog/devops/codex/prompts/observability-engineer.md"
+  },
+  {
+    "id": "devops/codex/prompts/release-manager",
+    "name": "release-manager",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Orchestrates an actual deployment and owns the rollback decision.",
+    "file": "catalog/devops/codex/prompts/release-manager.md"
+  },
+  {
+    "id": "devops/codex/prompts/secrets-management-specialist",
+    "name": "secrets-management-specialist",
+    "area": "devops",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vault/secrets-rotation setup (the execution side).",
+    "file": "catalog/devops/codex/prompts/secrets-management-specialist.md"
+  },
+  {
+    "id": "devops/antigravity/agents/ci-pipeline-engineer",
+    "name": "ci-pipeline-engineer",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Writes and maintains CI/CD pipeline configs.",
+    "file": "catalog/devops/antigravity/agents/ci-pipeline-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/cost-optimizer",
+    "name": "cost-optimizer",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes real cloud billing/usage data for waste.",
+    "file": "catalog/devops/antigravity/agents/cost-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/disaster-recovery-planner",
+    "name": "disaster-recovery-planner",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Backup/restore strategy and DR-drill design.",
+    "file": "catalog/devops/antigravity/agents/disaster-recovery-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/feature-flag-manager",
+    "name": "feature-flag-manager",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Rollout/kill-switch strategy and execution for a staged release.",
+    "file": "catalog/devops/antigravity/agents/feature-flag-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/iac-reviewer",
+    "name": "iac-reviewer",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terraform/CloudFormation/Pulumi review for correctness and cost.",
+    "file": "catalog/devops/antigravity/agents/iac-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/incident-responder",
+    "name": "incident-responder",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "General production incident response: triage, mitigation, resolution.",
+    "file": "catalog/devops/antigravity/agents/incident-responder.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/kubernetes-specialist",
+    "name": "kubernetes-specialist",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Cluster config review: resource requests/limits, autoscaling, PDBs.",
+    "file": "catalog/devops/antigravity/agents/kubernetes-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/observability-engineer",
+    "name": "observability-engineer",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Sets up/reviews logging, metrics, and tracing coverage.",
+    "file": "catalog/devops/antigravity/agents/observability-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/release-manager",
+    "name": "release-manager",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Orchestrates an actual deployment and owns the rollback decision.",
+    "file": "catalog/devops/antigravity/agents/release-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/agents/secrets-management-specialist",
+    "name": "secrets-management-specialist",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vault/secrets-rotation setup (the execution side).",
+    "file": "catalog/devops/antigravity/agents/secrets-management-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "devops/antigravity/skills/SKILL",
+    "name": "dr-drill-checklist",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "What a real DR drill needs to verify to count as done.",
+    "file": "catalog/devops/antigravity/skills/dr-drill-checklist/SKILL.md"
+  },
+  {
+    "id": "devops/antigravity/skills/SKILL",
+    "name": "postmortem-template",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Blameless incident postmortem format.",
+    "file": "catalog/devops/antigravity/skills/postmortem-template/SKILL.md"
+  },
+  {
+    "id": "devops/antigravity/skills/SKILL",
+    "name": "runbook-template",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent on-call runbook format for a specific failure mode.",
+    "file": "catalog/devops/antigravity/skills/runbook-template/SKILL.md"
+  },
+  {
+    "id": "devops/antigravity/mcp/cloud-provider-mcp",
+    "name": "cloud-provider-mcp",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Query real infra state from AWS/GCP/Azure.",
+    "file": "catalog/devops/antigravity/mcp/cloud-provider-mcp.md"
+  },
+  {
+    "id": "devops/antigravity/mcp/observability-mcp",
+    "name": "observability-mcp",
+    "area": "devops",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Datadog, Grafana, or Prometheus integration.",
+    "file": "catalog/devops/antigravity/mcp/observability-mcp.md"
+  },
+  {
+    "id": "security/claude/agents/authentication-reviewer",
+    "name": "authentication-reviewer",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep review of auth/authz flows specifically (SSO, OAuth/OIDC, session management, MFA).",
+    "file": "catalog/security/claude/agents/authentication-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/compliance-auditor",
+    "name": "compliance-auditor",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Maps real controls to a framework (SOC2/PCI/HIPAA) and gathers evidence.",
+    "file": "catalog/security/claude/agents/compliance-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/container-security-scanner",
+    "name": "container-security-scanner",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Docker/Kubernetes image vulnerability and misconfiguration scanning.",
+    "file": "catalog/security/claude/agents/container-security-scanner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/cryptography-reviewer",
+    "name": "cryptography-reviewer",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Key management and algorithm-choice review (custom crypto, weak algorithms, improper IV/nonce reuse).",
+    "file": "catalog/security/claude/agents/cryptography-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/dependency-vulnerability-auditor",
+    "name": "dependency-vulnerability-auditor",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Periodic, whole-tree SCA scan with exploitability assessment.",
+    "file": "catalog/security/claude/agents/dependency-vulnerability-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/iac-security-reviewer",
+    "name": "iac-security-reviewer",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Security misconfiguration in Terraform/CloudFormation/Kubernetes manifests.",
+    "file": "catalog/security/claude/agents/iac-security-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/penetration-tester",
+    "name": "penetration-tester",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Active, authorized exploitation testing against a real running app/environment.",
+    "file": "catalog/security/claude/agents/penetration-tester.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/privacy-reviewer",
+    "name": "privacy-reviewer",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data-privacy-impact review: PII handling, data minimization, retention.",
+    "file": "catalog/security/claude/agents/privacy-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/secrets-auditor",
+    "name": "secrets-auditor",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "A deep, whole-repo/whole-history scan for leaked credentials.",
+    "file": "catalog/security/claude/agents/secrets-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/security-incident-responder",
+    "name": "security-incident-responder",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Breach-specific incident response (containment, forensics, disclosure timeline).",
+    "file": "catalog/security/claude/agents/security-incident-responder.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/security-reviewer",
+    "name": "security-reviewer",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep counterpart to code-reviewer's security sanity check: real SAST-style review of a diff (injection, auth/authz, crypto misuse, OWASP Top 10).",
+    "file": "catalog/security/claude/agents/security-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/agents/threat-modeler",
+    "name": "threat-modeler",
+    "area": "security",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Performs design-time analysis (STRIDE or similar) before code exists, for a new feature/service with a meaningful trust boundary.",
+    "file": "catalog/security/claude/agents/threat-modeler.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "security/claude/skills/SKILL",
+    "name": "threat-model-template",
+    "area": "security",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent STRIDE-style write-up.",
+    "file": "catalog/security/claude/skills/threat-model-template/SKILL.md"
+  },
+  {
+    "id": "security/claude/skills/SKILL",
+    "name": "vulnerability-report-template",
+    "area": "security",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent CVE/finding write-up (severity, exploitability, remediation).",
+    "file": "catalog/security/claude/skills/vulnerability-report-template/SKILL.md"
+  },
+  {
+    "id": "security/claude/mcp/sast-tool-mcp",
+    "name": "sast-tool-mcp",
+    "area": "security",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Static application security testing (SAST) and vulnerability databases.",
+    "file": "catalog/security/claude/mcp/sast-tool-mcp.md"
+  },
+  {
+    "id": "security/codex/prompts/authentication-reviewer",
+    "name": "authentication-reviewer",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep review of auth/authz flows specifically (SSO, OAuth/OIDC, session management, MFA).",
+    "file": "catalog/security/codex/prompts/authentication-reviewer.md"
+  },
+  {
+    "id": "security/codex/prompts/compliance-auditor",
+    "name": "compliance-auditor",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Maps real controls to a framework (SOC2/PCI/HIPAA) and gathers evidence.",
+    "file": "catalog/security/codex/prompts/compliance-auditor.md"
+  },
+  {
+    "id": "security/codex/prompts/container-security-scanner",
+    "name": "container-security-scanner",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Docker/Kubernetes image vulnerability and misconfiguration scanning.",
+    "file": "catalog/security/codex/prompts/container-security-scanner.md"
+  },
+  {
+    "id": "security/codex/prompts/cryptography-reviewer",
+    "name": "cryptography-reviewer",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Key management and algorithm-choice review (custom crypto, weak algorithms, improper IV/nonce reuse).",
+    "file": "catalog/security/codex/prompts/cryptography-reviewer.md"
+  },
+  {
+    "id": "security/codex/prompts/dependency-vulnerability-auditor",
+    "name": "dependency-vulnerability-auditor",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Periodic, whole-tree SCA scan with exploitability assessment.",
+    "file": "catalog/security/codex/prompts/dependency-vulnerability-auditor.md"
+  },
+  {
+    "id": "security/codex/prompts/iac-security-reviewer",
+    "name": "iac-security-reviewer",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Security misconfiguration in Terraform/CloudFormation/Kubernetes manifests.",
+    "file": "catalog/security/codex/prompts/iac-security-reviewer.md"
+  },
+  {
+    "id": "security/codex/prompts/penetration-tester",
+    "name": "penetration-tester",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Active, authorized exploitation testing against a real running app/environment.",
+    "file": "catalog/security/codex/prompts/penetration-tester.md"
+  },
+  {
+    "id": "security/codex/prompts/privacy-reviewer",
+    "name": "privacy-reviewer",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data-privacy-impact review: PII handling, data minimization, retention.",
+    "file": "catalog/security/codex/prompts/privacy-reviewer.md"
+  },
+  {
+    "id": "security/codex/prompts/secrets-auditor",
+    "name": "secrets-auditor",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "A deep, whole-repo/whole-history scan for leaked credentials.",
+    "file": "catalog/security/codex/prompts/secrets-auditor.md"
+  },
+  {
+    "id": "security/codex/prompts/security-incident-responder",
+    "name": "security-incident-responder",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Breach-specific incident response (containment, forensics, disclosure timeline).",
+    "file": "catalog/security/codex/prompts/security-incident-responder.md"
+  },
+  {
+    "id": "security/codex/prompts/security-reviewer",
+    "name": "security-reviewer",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep counterpart to code-reviewer's security sanity check: real SAST-style review of a diff (injection, auth/authz, crypto misuse, OWASP Top 10).",
+    "file": "catalog/security/codex/prompts/security-reviewer.md"
+  },
+  {
+    "id": "security/codex/prompts/threat-modeler",
+    "name": "threat-modeler",
+    "area": "security",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Performs design-time analysis (STRIDE or similar) before code exists, for a new feature/service with a meaningful trust boundary.",
+    "file": "catalog/security/codex/prompts/threat-modeler.md"
+  },
+  {
+    "id": "security/antigravity/agents/authentication-reviewer",
+    "name": "authentication-reviewer",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep review of auth/authz flows specifically (SSO, OAuth/OIDC, session management, MFA).",
+    "file": "catalog/security/antigravity/agents/authentication-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/compliance-auditor",
+    "name": "compliance-auditor",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Maps real controls to a framework (SOC2/PCI/HIPAA) and gathers evidence.",
+    "file": "catalog/security/antigravity/agents/compliance-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/container-security-scanner",
+    "name": "container-security-scanner",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Docker/Kubernetes image vulnerability and misconfiguration scanning.",
+    "file": "catalog/security/antigravity/agents/container-security-scanner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/cryptography-reviewer",
+    "name": "cryptography-reviewer",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Key management and algorithm-choice review (custom crypto, weak algorithms, improper IV/nonce reuse).",
+    "file": "catalog/security/antigravity/agents/cryptography-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/dependency-vulnerability-auditor",
+    "name": "dependency-vulnerability-auditor",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Periodic, whole-tree SCA scan with exploitability assessment.",
+    "file": "catalog/security/antigravity/agents/dependency-vulnerability-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/iac-security-reviewer",
+    "name": "iac-security-reviewer",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Security misconfiguration in Terraform/CloudFormation/Kubernetes manifests.",
+    "file": "catalog/security/antigravity/agents/iac-security-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/penetration-tester",
+    "name": "penetration-tester",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Active, authorized exploitation testing against a real running app/environment.",
+    "file": "catalog/security/antigravity/agents/penetration-tester.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/privacy-reviewer",
+    "name": "privacy-reviewer",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Data-privacy-impact review: PII handling, data minimization, retention.",
+    "file": "catalog/security/antigravity/agents/privacy-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/secrets-auditor",
+    "name": "secrets-auditor",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "A deep, whole-repo/whole-history scan for leaked credentials.",
+    "file": "catalog/security/antigravity/agents/secrets-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/security-incident-responder",
+    "name": "security-incident-responder",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Breach-specific incident response (containment, forensics, disclosure timeline).",
+    "file": "catalog/security/antigravity/agents/security-incident-responder.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/security-reviewer",
+    "name": "security-reviewer",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Deep counterpart to code-reviewer's security sanity check: real SAST-style review of a diff (injection, auth/authz, crypto misuse, OWASP Top 10).",
+    "file": "catalog/security/antigravity/agents/security-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/agents/threat-modeler",
+    "name": "threat-modeler",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Performs design-time analysis (STRIDE or similar) before code exists, for a new feature/service with a meaningful trust boundary.",
+    "file": "catalog/security/antigravity/agents/threat-modeler.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "security/antigravity/skills/SKILL",
+    "name": "threat-model-template",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent STRIDE-style write-up.",
+    "file": "catalog/security/antigravity/skills/threat-model-template/SKILL.md"
+  },
+  {
+    "id": "security/antigravity/skills/SKILL",
+    "name": "vulnerability-report-template",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent CVE/finding write-up (severity, exploitability, remediation).",
+    "file": "catalog/security/antigravity/skills/vulnerability-report-template/SKILL.md"
+  },
+  {
+    "id": "security/antigravity/mcp/sast-tool-mcp",
+    "name": "sast-tool-mcp",
+    "area": "security",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Static application security testing (SAST) and vulnerability databases.",
+    "file": "catalog/security/antigravity/mcp/sast-tool-mcp.md"
+  },
+  {
+    "id": "data-ai/claude/agents/ai-safety-reviewer",
+    "name": "ai-safety-reviewer",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Jailbreak/prompt-injection resistance testing for an LLM-backed feature.",
+    "file": "catalog/data-ai/claude/agents/ai-safety-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/data-pipeline-reviewer",
+    "name": "data-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Ongoing ETL/data-pipeline correctness review.",
+    "file": "catalog/data-ai/claude/agents/data-pipeline-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/data-quality-auditor",
+    "name": "data-quality-auditor",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Validation/quality checks on a dataset before it's used.",
+    "file": "catalog/data-ai/claude/agents/data-quality-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/fine-tuning-specialist",
+    "name": "fine-tuning-specialist",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Dataset curation and the fine-tuning workflow itself.",
+    "file": "catalog/data-ai/claude/agents/fine-tuning-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/ml-model-evaluator",
+    "name": "ml-model-evaluator",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Offline evaluation against real metrics/held-out data.",
+    "file": "catalog/data-ai/claude/agents/ml-model-evaluator.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/model-monitoring-specialist",
+    "name": "model-monitoring-specialist",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Production ML drift detection (data drift, prediction drift).",
+    "file": "catalog/data-ai/claude/agents/model-monitoring-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/prompt-engineer",
+    "name": "prompt-engineer",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs and iterates on prompts for an LLM-backed feature with actual eval runs.",
+    "file": "catalog/data-ai/claude/agents/prompt-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/agents/rag-pipeline-reviewer",
+    "name": "rag-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews chunking, embedding, and retrieval quality for a RAG system.",
+    "file": "catalog/data-ai/claude/agents/rag-pipeline-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "data-ai/claude/skills/SKILL",
+    "name": "eval-dataset-template",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent format for a golden eval dataset.",
+    "file": "catalog/data-ai/claude/skills/eval-dataset-template/SKILL.md"
+  },
+  {
+    "id": "data-ai/claude/mcp/llm-observability-mcp",
+    "name": "llm-observability-mcp",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "LangSmith or similar for real trace/eval data.",
+    "file": "catalog/data-ai/claude/mcp/llm-observability-mcp.md"
+  },
+  {
+    "id": "data-ai/claude/mcp/vector-db-mcp",
+    "name": "vector-db-mcp",
+    "area": "data-ai",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Query Pinecone, Weaviate, or Qdrant for RAG pipeline review.",
+    "file": "catalog/data-ai/claude/mcp/vector-db-mcp.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/ai-safety-reviewer",
+    "name": "ai-safety-reviewer",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Jailbreak/prompt-injection resistance testing for an LLM-backed feature.",
+    "file": "catalog/data-ai/codex/prompts/ai-safety-reviewer.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/data-pipeline-reviewer",
+    "name": "data-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Ongoing ETL/data-pipeline correctness review.",
+    "file": "catalog/data-ai/codex/prompts/data-pipeline-reviewer.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/data-quality-auditor",
+    "name": "data-quality-auditor",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Validation/quality checks on a dataset before it's used.",
+    "file": "catalog/data-ai/codex/prompts/data-quality-auditor.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/fine-tuning-specialist",
+    "name": "fine-tuning-specialist",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Dataset curation and the fine-tuning workflow itself.",
+    "file": "catalog/data-ai/codex/prompts/fine-tuning-specialist.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/ml-model-evaluator",
+    "name": "ml-model-evaluator",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Offline evaluation against real metrics/held-out data.",
+    "file": "catalog/data-ai/codex/prompts/ml-model-evaluator.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/model-monitoring-specialist",
+    "name": "model-monitoring-specialist",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Production ML drift detection (data drift, prediction drift).",
+    "file": "catalog/data-ai/codex/prompts/model-monitoring-specialist.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/prompt-engineer",
+    "name": "prompt-engineer",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs and iterates on prompts for an LLM-backed feature with actual eval runs.",
+    "file": "catalog/data-ai/codex/prompts/prompt-engineer.md"
+  },
+  {
+    "id": "data-ai/codex/prompts/rag-pipeline-reviewer",
+    "name": "rag-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews chunking, embedding, and retrieval quality for a RAG system.",
+    "file": "catalog/data-ai/codex/prompts/rag-pipeline-reviewer.md"
+  },
+  {
+    "id": "data-ai/antigravity/agents/ai-safety-reviewer",
+    "name": "ai-safety-reviewer",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Jailbreak/prompt-injection resistance testing for an LLM-backed feature.",
+    "file": "catalog/data-ai/antigravity/agents/ai-safety-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/data-pipeline-reviewer",
+    "name": "data-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Ongoing ETL/data-pipeline correctness review.",
+    "file": "catalog/data-ai/antigravity/agents/data-pipeline-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/data-quality-auditor",
+    "name": "data-quality-auditor",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Validation/quality checks on a dataset before it's used.",
+    "file": "catalog/data-ai/antigravity/agents/data-quality-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/fine-tuning-specialist",
+    "name": "fine-tuning-specialist",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Dataset curation and the fine-tuning workflow itself.",
+    "file": "catalog/data-ai/antigravity/agents/fine-tuning-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/ml-model-evaluator",
+    "name": "ml-model-evaluator",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Offline evaluation against real metrics/held-out data.",
+    "file": "catalog/data-ai/antigravity/agents/ml-model-evaluator.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/model-monitoring-specialist",
+    "name": "model-monitoring-specialist",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Production ML drift detection (data drift, prediction drift).",
+    "file": "catalog/data-ai/antigravity/agents/model-monitoring-specialist.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/prompt-engineer",
+    "name": "prompt-engineer",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs and iterates on prompts for an LLM-backed feature with actual eval runs.",
+    "file": "catalog/data-ai/antigravity/agents/prompt-engineer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/agents/rag-pipeline-reviewer",
+    "name": "rag-pipeline-reviewer",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Reviews chunking, embedding, and retrieval quality for a RAG system.",
+    "file": "catalog/data-ai/antigravity/agents/rag-pipeline-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "data-ai/antigravity/skills/SKILL",
+    "name": "eval-dataset-template",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Consistent format for a golden eval dataset.",
+    "file": "catalog/data-ai/antigravity/skills/eval-dataset-template/SKILL.md"
+  },
+  {
+    "id": "data-ai/antigravity/mcp/llm-observability-mcp",
+    "name": "llm-observability-mcp",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "LangSmith or similar for real trace/eval data.",
+    "file": "catalog/data-ai/antigravity/mcp/llm-observability-mcp.md"
+  },
+  {
+    "id": "data-ai/antigravity/mcp/vector-db-mcp",
+    "name": "vector-db-mcp",
+    "area": "data-ai",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Query Pinecone, Weaviate, or Qdrant for RAG pipeline review.",
+    "file": "catalog/data-ai/antigravity/mcp/vector-db-mcp.md"
+  },
+  {
+    "id": "business/claude/agents/competitive-analysis-writer",
+    "name": "competitive-analysis-writer",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structured comparison against named competitors from real information.",
+    "file": "catalog/business/claude/agents/competitive-analysis-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/claude/agents/okr-planner",
+    "name": "okr-planner",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structures goals/key-results with real, checkable success criteria.",
+    "file": "catalog/business/claude/agents/okr-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/claude/agents/pricing-analyst",
+    "name": "pricing-analyst",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Pricing-model analysis grounded in real cost/usage data.",
+    "file": "catalog/business/claude/agents/pricing-analyst.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/claude/agents/product-spec-writer",
+    "name": "product-spec-writer",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns a rough idea into a structured PRD with explicit open questions flagged.",
+    "file": "catalog/business/claude/agents/product-spec-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/claude/agents/stakeholder-comms-writer",
+    "name": "stakeholder-comms-writer",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Status updates / exec summaries from real project state.",
+    "file": "catalog/business/claude/agents/stakeholder-comms-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/claude/agents/user-research-synthesizer",
+    "name": "user-research-synthesizer",
+    "area": "business",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns raw interview notes/feedback into structured themes/insights.",
+    "file": "catalog/business/claude/agents/user-research-synthesizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "business/codex/prompts/competitive-analysis-writer",
+    "name": "competitive-analysis-writer",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structured comparison against named competitors from real information.",
+    "file": "catalog/business/codex/prompts/competitive-analysis-writer.md"
+  },
+  {
+    "id": "business/codex/prompts/okr-planner",
+    "name": "okr-planner",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structures goals/key-results with real, checkable success criteria.",
+    "file": "catalog/business/codex/prompts/okr-planner.md"
+  },
+  {
+    "id": "business/codex/prompts/pricing-analyst",
+    "name": "pricing-analyst",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Pricing-model analysis grounded in real cost/usage data.",
+    "file": "catalog/business/codex/prompts/pricing-analyst.md"
+  },
+  {
+    "id": "business/codex/prompts/product-spec-writer",
+    "name": "product-spec-writer",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns a rough idea into a structured PRD with explicit open questions flagged.",
+    "file": "catalog/business/codex/prompts/product-spec-writer.md"
+  },
+  {
+    "id": "business/codex/prompts/stakeholder-comms-writer",
+    "name": "stakeholder-comms-writer",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Status updates / exec summaries from real project state.",
+    "file": "catalog/business/codex/prompts/stakeholder-comms-writer.md"
+  },
+  {
+    "id": "business/codex/prompts/user-research-synthesizer",
+    "name": "user-research-synthesizer",
+    "area": "business",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns raw interview notes/feedback into structured themes/insights.",
+    "file": "catalog/business/codex/prompts/user-research-synthesizer.md"
+  },
+  {
+    "id": "business/antigravity/agents/competitive-analysis-writer",
+    "name": "competitive-analysis-writer",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structured comparison against named competitors from real information.",
+    "file": "catalog/business/antigravity/agents/competitive-analysis-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "business/antigravity/agents/okr-planner",
+    "name": "okr-planner",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Structures goals/key-results with real, checkable success criteria.",
+    "file": "catalog/business/antigravity/agents/okr-planner.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "business/antigravity/agents/pricing-analyst",
+    "name": "pricing-analyst",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Pricing-model analysis grounded in real cost/usage data.",
+    "file": "catalog/business/antigravity/agents/pricing-analyst.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "business/antigravity/agents/product-spec-writer",
+    "name": "product-spec-writer",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns a rough idea into a structured PRD with explicit open questions flagged.",
+    "file": "catalog/business/antigravity/agents/product-spec-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "business/antigravity/agents/stakeholder-comms-writer",
+    "name": "stakeholder-comms-writer",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Status updates / exec summaries from real project state.",
+    "file": "catalog/business/antigravity/agents/stakeholder-comms-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "business/antigravity/agents/user-research-synthesizer",
+    "name": "user-research-synthesizer",
+    "area": "business",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Turns raw interview notes/feedback into structured themes/insights.",
+    "file": "catalog/business/antigravity/agents/user-research-synthesizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/claude/agents/accessibility-auditor",
+    "name": "accessibility-auditor",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real UI. Move to production once it's caught a real WCAG violation that got fixed.",
+    "description": "Use when a UI needs to be checked for accessibility (WCAG) compliance using real automated scanning, not a manual guess from markup.",
+    "file": "catalog/qa/claude/agents/accessibility-auditor.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/api-tester",
+    "name": "api-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real API. Move to production once it's caught a real contract bug.",
+    "description": "Use when a REST or GraphQL endpoint needs to be tested against its actual contract with real requests, not assumptions.",
+    "file": "catalog/qa/claude/agents/api-tester.md",
+    "tools": [
+      "Read",
+      "Bash",
+      "Write",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/browser-automation-tester",
+    "name": "browser-automation-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real app. Move to production once it's caught a real bug by actually driving a browser.",
+    "description": "Use when a UI feature or bug needs to be verified by actually driving a real browser (Playwright), not just reasoning about the code.",
+    "file": "catalog/qa/claude/agents/browser-automation-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/bug-triage-analyst",
+    "name": "bug-triage-analyst",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real bug backlog. Move to production once it's triaged real reports that held up.",
+    "description": "Use when a raw bug report needs to be reproduced, minimized, severity-rated, and written up as an actionable report.",
+    "file": "catalog/qa/claude/agents/bug-triage-analyst.md",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash",
+      "Write"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/chaos-resilience-tester",
+    "name": "chaos-resilience-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real system. Higher blast-radius than the rest of this folder by design; move to production only after a real, deliberately-scoped run against a non-critical environment.",
+    "description": "Use when you need to verify a system degrades gracefully (not catastrophically) under real fault injection -- a dependency dying, added latency, dropped network -- rather than assuming resilience from reading retry/circuit-breaker code.",
+    "file": "catalog/qa/claude/agents/chaos-resilience-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/contract-tester",
+    "name": "contract-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real multi-service contract. Move to production once it's caught a real contract break before it shipped.",
+    "description": "Use when a change to a service's API needs to be checked against every consumer's actual expectations (consumer-driven contract testing), not just its own contract in isolation.",
+    "file": "catalog/qa/claude/agents/contract-tester.md",
+    "tools": [
+      "Read",
+      "Bash",
+      "Write",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/coverage-analyst",
+    "name": "coverage-analyst",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real coverage report. Move to production once it's found a real undertested critical path that got a test written for it.",
+    "description": "Use when you need to know not just \"what % coverage\" but which specific, business-critical code paths are actually undertested -- reads real coverage output and prioritizes by what matters, not by raw percentage.",
+    "file": "catalog/qa/claude/agents/coverage-analyst.md",
+    "tools": [
+      "Read",
+      "Bash",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/cross-browser-tester",
+    "name": "cross-browser-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real browser/device matrix. Move to production once it's caught a real engine-specific regression.",
+    "description": "Use when a feature already verified in one browser needs to be checked across the project's actual supported browser/device matrix, to catch engine-specific rendering or behavior differences.",
+    "file": "catalog/qa/claude/agents/cross-browser-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/data-migration-tester",
+    "name": "data-migration-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real migration. Move to production once it's caught a real data-loss or corruption bug before it shipped.",
+    "description": "Use when a data migration, schema change, or ETL pipeline needs to be verified for data integrity -- no silent row loss, corruption, truncation, or broken referential integrity -- not just \"did the app still boot after.\"",
+    "file": "catalog/qa/claude/agents/data-migration-tester.md",
+    "tools": [
+      "Read",
+      "Bash",
+      "Write",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/exploratory-tester",
+    "name": "exploratory-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real charter. Move to production once a real session found something scripted testing wouldn't have.",
+    "description": "Use for session-based exploratory testing (SBTM) -- time-boxed, charter-driven, free-form investigation of an area with no pre-written test cases, meant to surface the unknown-unknowns spec-derived testing misses.",
+    "file": "catalog/qa/claude/agents/exploratory-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/flaky-test-investigator",
+    "name": "flaky-test-investigator",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real intermittent failure. Move to production once it's correctly told apart a real flake from a real bug.",
+    "description": "Use when a test fails intermittently and you need to determine whether it's genuinely flaky or a real intermittent bug, then either fix it, quarantine it properly, or escalate it -- never just silently retry until green.",
+    "file": "catalog/qa/claude/agents/flaky-test-investigator.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Grep",
+      "Glob",
+      "Write"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/functional-tester",
+    "name": "functional-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real feature. Move to production once it's shipped real test cases against a real spec.",
+    "description": "Use when a feature needs structured manual/functional test cases derived from a spec and checked against the real implementation.",
+    "file": "catalog/qa/claude/agents/functional-tester.md",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/localization-tester",
+    "name": "localization-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real localized UI. Move to production once it's caught a real i18n bug (truncation, hardcoded string, RTL break).",
+    "description": "Use when a UI needs to be checked for internationalization/localization correctness -- rendering, layout, and formatting across locales -- not translation quality itself.",
+    "file": "catalog/qa/claude/agents/localization-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/mobile-app-tester",
+    "name": "mobile-app-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real native app. Move to production once it's caught a real platform-specific bug (permissions, lifecycle, gesture).",
+    "description": "Use when a native iOS or Android app (not a mobile web page) needs to be verified by actually driving it on a simulator/emulator or real device, via Appium.",
+    "file": "catalog/qa/claude/agents/mobile-app-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/performance-tester",
+    "name": "performance-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real service. Move to production once it's caught a real performance regression.",
+    "description": "Use when a service or page needs load/stress testing or performance-budget verification with real measurements, not estimates.",
+    "file": "catalog/qa/claude/agents/performance-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/qa-lead",
+    "name": "qa-lead",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page as the entry point of the QA team — not yet run against a real release cycle. Move to production once it's driven an actual go/no-go call.",
+    "description": "Use when you need to decide test strategy, scope, and a ship/no-ship call for a feature or release, and delegate to the right specialist QA role.",
+    "file": "catalog/qa/claude/agents/qa-lead.md",
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/test-automation-engineer",
+    "name": "test-automation-engineer",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real codebase. Move to production once it's shipped a real test suite that caught a real regression.",
+    "description": "Use when a feature or bugfix needs a lasting automated test (unit/integration/E2E) added to the project's real test suite.",
+    "file": "catalog/qa/claude/agents/test-automation-engineer.md",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/test-data-engineer",
+    "name": "test-data-engineer",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real project's data layer. Move to production once it's set up real, safe test data that other roles actually used.",
+    "description": "Use when tests need realistic, reproducible test data -- fixtures, factories, seeded datasets -- or when data needs to move from a real environment into a test one and must be safely anonymized first.",
+    "file": "catalog/qa/claude/agents/test-data-engineer.md",
+    "tools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Grep"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/visual-regression-tester",
+    "name": "visual-regression-tester",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real UI. Move to production once it's caught a real visual regression that functional tests missed.",
+    "description": "Use when a UI change needs to be checked for unintended visual/layout regressions via pixel-level screenshot comparison, not just DOM/functional assertions.",
+    "file": "catalog/qa/claude/agents/visual-regression-tester.md",
+    "tools": [
+      "Bash",
+      "Read",
+      "Write",
+      "Glob"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/agents/white-box-test-designer",
+    "name": "white-box-test-designer",
+    "area": "qa",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs test cases from the code's actual internal structure/branches and runs mutation testing.",
+    "file": "catalog/qa/claude/agents/white-box-test-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "qa/claude/skills/SKILL",
+    "name": "bug-report-template",
+    "area": "qa",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real bug backlog.",
+    "description": "Format a reproduced bug into a consistent, actionable report — title, repro, severity, suspected area.",
+    "file": "catalog/qa/claude/skills/bug-report-template/SKILL.md"
+  },
+  {
+    "id": "qa/claude/skills/SKILL",
+    "name": "post-deploy-smoke-check",
+    "area": "qa",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real production deploy.",
+    "description": "Run a fast, time-boxed check against real production right after a deploy to catch a broken release before users report it -- distinct from release-smoke-checklist, which runs before shipping.",
+    "file": "catalog/qa/claude/skills/post-deploy-smoke-check/SKILL.md"
+  },
+  {
+    "id": "qa/claude/skills/SKILL",
+    "name": "release-smoke-checklist",
+    "area": "qa",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real release.",
+    "description": "Build and execute a fast, time-boxed pre-release smoke suite covering critical user flows and known-fragile areas, ending in a go/no-go input.",
+    "file": "catalog/qa/claude/skills/release-smoke-checklist/SKILL.md"
+  },
+  {
+    "id": "qa/claude/skills/SKILL",
+    "name": "test-case-writer",
+    "area": "qa",
+    "platform": "claude",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run against a real spec.",
+    "description": "Turn a feature spec, PR description, or ticket into a structured test case matrix covering happy path, edge cases, and negative cases.",
+    "file": "catalog/qa/claude/skills/test-case-writer/SKILL.md"
+  },
+  {
+    "id": "qa/claude/mcp/issue-tracker-mcp",
+    "name": "issue-tracker-mcp",
+    "area": "qa",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet used against a real Jira/Trello/Notion workspace. Move to production once it's actually filed a ticket that stuck.",
+    "description": "Wires an issue-tracker MCP server (Jira/Confluence, Notion, Trello, or similar) into Claude so bug-triage-analyst can file the ticket directly instead of only producing a markdown write-up.",
+    "file": "catalog/qa/claude/mcp/issue-tracker-mcp.md"
+  },
+  {
+    "id": "qa/claude/mcp/playwright-mcp",
+    "name": "playwright-mcp",
+    "area": "qa",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project. Move to production once a real session has used it to drive a browser.",
+    "description": "Wires the official Playwright MCP server into Claude, giving direct structured browser control instead of Claude writing and running throwaway Playwright scripts via Bash.",
+    "file": "catalog/qa/claude/mcp/playwright-mcp.md"
+  },
+  {
+    "id": "qa/claude/mcp/test-management-mcp",
+    "name": "test-management-mcp",
+    "area": "qa",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet used against a real TestRail/Xray/Zephyr/Qase project. Speculative on the MCP-availability front specifically -- verify before relying on it.",
+    "description": "Wires a dedicated test-case-management platform (TestRail, Xray, Zephyr, Qase, or similar) into Claude so test-case-writer's matrix can be synced there and execution results recorded, instead of living only as markdown.",
+    "file": "catalog/qa/claude/mcp/test-management-mcp.md"
+  },
+  {
+    "id": "qa/claude/hooks/pre-commit-test-gate",
+    "name": "pre-commit-test-gate",
+    "area": "qa",
+    "platform": "claude",
+    "type": "hooks",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project. Move to production once it's actually blocked a bad commit.",
+    "description": "Blocks Claude from running `git commit` via the Bash tool until the project's test command passes, so a broken test suite can't get committed silently.",
+    "file": "catalog/qa/claude/hooks/pre-commit-test-gate.md"
+  },
+  {
+    "id": "qa/codex/agents-md/qa-conventions",
+    "name": "qa-conventions",
+    "area": "qa",
+    "platform": "codex",
+    "type": "agents-md",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project. Move to production once a real coding agent has followed it correctly.",
+    "description": "",
+    "file": "catalog/qa/codex/agents-md/qa-conventions.md"
+  },
+  {
+    "id": "qa/codex/prompts/accessibility-check",
+    "name": "accessibility-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/accessibility-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/api-contract-check",
+    "name": "api-contract-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/api-contract-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/browser-e2e-check",
+    "name": "browser-e2e-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/browser-e2e-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/bug-report",
+    "name": "bug-report",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/bug-report.md"
+  },
+  {
+    "id": "qa/codex/prompts/chaos-resilience-check",
+    "name": "chaos-resilience-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project. Higher blast-radius than the other prompts in this folder by design -- scope carefully.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/chaos-resilience-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/contract-check",
+    "name": "contract-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/contract-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/coverage-analysis",
+    "name": "coverage-analysis",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/coverage-analysis.md"
+  },
+  {
+    "id": "qa/codex/prompts/cross-browser-check",
+    "name": "cross-browser-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/cross-browser-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/data-migration-check",
+    "name": "data-migration-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/data-migration-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/exploratory-session",
+    "name": "exploratory-session",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/exploratory-session.md"
+  },
+  {
+    "id": "qa/codex/prompts/flaky-test-check",
+    "name": "flaky-test-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/flaky-test-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/localization-check",
+    "name": "localization-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/localization-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/mobile-app-check",
+    "name": "mobile-app-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/mobile-app-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/performance-check",
+    "name": "performance-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/performance-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/post-deploy-smoke-check",
+    "name": "post-deploy-smoke-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/post-deploy-smoke-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/qa-strategy",
+    "name": "qa-strategy",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/qa-strategy.md"
+  },
+  {
+    "id": "qa/codex/prompts/release-smoke-check",
+    "name": "release-smoke-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/release-smoke-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/test-case-matrix",
+    "name": "test-case-matrix",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/test-case-matrix.md"
+  },
+  {
+    "id": "qa/codex/prompts/test-data-setup",
+    "name": "test-data-setup",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/test-data-setup.md"
+  },
+  {
+    "id": "qa/codex/prompts/visual-regression-check",
+    "name": "visual-regression-check",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/visual-regression-check.md"
+  },
+  {
+    "id": "qa/codex/prompts/white-box-test-designer",
+    "name": "white-box-test-designer",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs test cases from the code's actual internal structure/branches and runs mutation testing.",
+    "file": "catalog/qa/codex/prompts/white-box-test-designer.md"
+  },
+  {
+    "id": "qa/codex/prompts/write-automated-test",
+    "name": "write-automated-test",
+    "area": "qa",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Authored for rune-codex-page's QA team — not yet run in a real project.",
+    "description": "",
+    "file": "catalog/qa/codex/prompts/write-automated-test.md"
+  },
+  {
+    "id": "qa/antigravity/agents/accessibility-auditor",
+    "name": "accessibility-auditor",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude accessibility-auditor agent (../../claude/agents/accessibility-auditor.md) — not yet run against a real UI.",
+    "description": "Use when a UI needs to be checked for accessibility (WCAG) compliance using real automated scanning, not a manual guess from markup.",
+    "file": "catalog/qa/antigravity/agents/accessibility-auditor.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/api-tester",
+    "name": "api-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude api-tester agent (../../claude/agents/api-tester.md) — not yet run against a real API.",
+    "description": "Use when a REST or GraphQL endpoint needs to be tested against its actual contract with real requests, not assumptions.",
+    "file": "catalog/qa/antigravity/agents/api-tester.md",
+    "tools": [
+      "view_file",
+      "run_command",
+      "write_to_file",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/browser-automation-tester",
+    "name": "browser-automation-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude browser-automation-tester agent (../../claude/agents/browser-automation-tester.md) — not yet run against a real app.",
+    "description": "Use when a UI feature or bug needs to be verified by actually driving a real browser (Playwright), not just reasoning about the code.",
+    "file": "catalog/qa/antigravity/agents/browser-automation-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/bug-triage-analyst",
+    "name": "bug-triage-analyst",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude bug-triage-analyst agent (../../claude/agents/bug-triage-analyst.md) — not yet run against a real bug backlog.",
+    "description": "Use when a raw bug report needs to be reproduced, minimized, severity-rated, and written up as an actionable report.",
+    "file": "catalog/qa/antigravity/agents/bug-triage-analyst.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command",
+      "write_to_file"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/chaos-resilience-tester",
+    "name": "chaos-resilience-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude chaos-resilience-tester agent (../../claude/agents/chaos-resilience-tester.md) — not yet run against a real system. Higher blast-radius than the rest of this folder by design; move to production only after a real, deliberately-scoped run against a non-critical environment.",
+    "description": "Use when you need to verify a system degrades gracefully (not catastrophically) under real fault injection -- a dependency dying, added latency, dropped network -- rather than assuming resilience from reading retry/circuit-breaker code.",
+    "file": "catalog/qa/antigravity/agents/chaos-resilience-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/contract-tester",
+    "name": "contract-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude contract-tester agent (../../claude/agents/contract-tester.md) — not yet run against a real multi-service contract.",
+    "description": "Use when a change to a service's API needs to be checked against every consumer's actual expectations (consumer-driven contract testing), not just its own contract in isolation.",
+    "file": "catalog/qa/antigravity/agents/contract-tester.md",
+    "tools": [
+      "view_file",
+      "run_command",
+      "write_to_file",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/coverage-analyst",
+    "name": "coverage-analyst",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude coverage-analyst agent (../../claude/agents/coverage-analyst.md) — not yet run against a real coverage report.",
+    "description": "Use when you need to know not just \"what % coverage\" but which specific, business-critical code paths are actually undertested -- reads real coverage output and prioritizes by what matters, not by raw percentage.",
+    "file": "catalog/qa/antigravity/agents/coverage-analyst.md",
+    "tools": [
+      "view_file",
+      "run_command",
+      "grep_search",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/cross-browser-tester",
+    "name": "cross-browser-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude cross-browser-tester agent (../../claude/agents/cross-browser-tester.md) — not yet run against a real browser/device matrix.",
+    "description": "Use when a feature already verified in one browser needs to be checked across the project's actual supported browser/device matrix, to catch engine-specific rendering or behavior differences.",
+    "file": "catalog/qa/antigravity/agents/cross-browser-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/data-migration-tester",
+    "name": "data-migration-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude data-migration-tester agent (../../claude/agents/data-migration-tester.md) — not yet run against a real migration.",
+    "description": "Use when a data migration, schema change, or ETL pipeline needs to be verified for data integrity -- no silent row loss, corruption, truncation, or broken referential integrity -- not just \"did the app still boot after.\"",
+    "file": "catalog/qa/antigravity/agents/data-migration-tester.md",
+    "tools": [
+      "view_file",
+      "run_command",
+      "write_to_file",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/exploratory-tester",
+    "name": "exploratory-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude exploratory-tester agent (../../claude/agents/exploratory-tester.md) — not yet run against a real charter.",
+    "description": "Use for session-based exploratory testing (SBTM) -- time-boxed, charter-driven, free-form investigation of an area with no pre-written test cases, meant to surface the unknown-unknowns spec-derived testing misses.",
+    "file": "catalog/qa/antigravity/agents/exploratory-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/flaky-test-investigator",
+    "name": "flaky-test-investigator",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude flaky-test-investigator agent (../../claude/agents/flaky-test-investigator.md) — not yet run against a real intermittent failure.",
+    "description": "Use when a test fails intermittently and you need to determine whether it's genuinely flaky or a real intermittent bug, then either fix it, quarantine it properly, or escalate it -- never just silently retry until green.",
+    "file": "catalog/qa/antigravity/agents/flaky-test-investigator.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "write_to_file"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/functional-tester",
+    "name": "functional-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude functional-tester agent (../../claude/agents/functional-tester.md) — not yet run against a real feature.",
+    "description": "Use when a feature needs structured manual/functional test cases derived from a spec and checked against the real implementation.",
+    "file": "catalog/qa/antigravity/agents/functional-tester.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/localization-tester",
+    "name": "localization-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude localization-tester agent (../../claude/agents/localization-tester.md) — not yet run against a real localized UI.",
+    "description": "Use when a UI needs to be checked for internationalization/localization correctness -- rendering, layout, and formatting across locales -- not translation quality itself.",
+    "file": "catalog/qa/antigravity/agents/localization-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/mobile-app-tester",
+    "name": "mobile-app-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude mobile-app-tester agent (../../claude/agents/mobile-app-tester.md) — not yet run against a real native app.",
+    "description": "Use when a native iOS or Android app (not a mobile web page) needs to be verified by actually driving it on a simulator/emulator or real device, via Appium.",
+    "file": "catalog/qa/antigravity/agents/mobile-app-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/performance-tester",
+    "name": "performance-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude performance-tester agent (../../claude/agents/performance-tester.md) — not yet run against a real service.",
+    "description": "Use when a service or page needs load/stress testing or performance-budget verification with real measurements, not estimates.",
+    "file": "catalog/qa/antigravity/agents/performance-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/qa-lead",
+    "name": "qa-lead",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude qa-lead agent (../../claude/agents/qa-lead.md) — not yet run in a real Antigravity workspace. Move to production once it's driven an actual go/no-go call.",
+    "description": "Use when you need to decide test strategy, scope, and a ship/no-ship call for a feature or release, and delegate to the right specialist QA subagent.",
+    "file": "catalog/qa/antigravity/agents/qa-lead.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/test-automation-engineer",
+    "name": "test-automation-engineer",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude test-automation-engineer agent (../../claude/agents/test-automation-engineer.md) — not yet run against a real codebase.",
+    "description": "Use when a feature or bugfix needs a lasting automated test (unit/integration/E2E) added to the project's real test suite.",
+    "file": "catalog/qa/antigravity/agents/test-automation-engineer.md",
+    "tools": [
+      "view_file",
+      "write_to_file",
+      "replace_file_content",
+      "run_command",
+      "list_dir",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/test-data-engineer",
+    "name": "test-data-engineer",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude test-data-engineer agent (../../claude/agents/test-data-engineer.md) — not yet run against a real project's data layer.",
+    "description": "Use when tests need realistic, reproducible test data -- fixtures, factories, seeded datasets -- or when data needs to move from a real environment into a test one and must be safely anonymized first.",
+    "file": "catalog/qa/antigravity/agents/test-data-engineer.md",
+    "tools": [
+      "view_file",
+      "write_to_file",
+      "replace_file_content",
+      "run_command",
+      "grep_search"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/visual-regression-tester",
+    "name": "visual-regression-tester",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Ported from the Claude visual-regression-tester agent (../../claude/agents/visual-regression-tester.md) — not yet run against a real UI.",
+    "description": "Use when a UI change needs to be checked for unintended visual/layout regressions via pixel-level screenshot comparison, not just DOM/functional assertions.",
+    "file": "catalog/qa/antigravity/agents/visual-regression-tester.md",
+    "tools": [
+      "run_command",
+      "view_file",
+      "write_to_file",
+      "list_dir"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/agents/white-box-test-designer",
+    "name": "white-box-test-designer",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Designs test cases from the code's actual internal structure/branches and runs mutation testing.",
+    "file": "catalog/qa/antigravity/agents/white-box-test-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "qa/antigravity/skills/SKILL",
+    "name": "bug-report-template",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Ported from the Claude bug-report-template skill (../../../claude/skills/bug-report-template/SKILL.md) — not yet run against a real bug backlog.",
+    "description": "Format a reproduced bug into a consistent, actionable report — title, repro, severity, suspected area.",
+    "file": "catalog/qa/antigravity/skills/bug-report-template/SKILL.md"
+  },
+  {
+    "id": "qa/antigravity/skills/SKILL",
+    "name": "post-deploy-smoke-check",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Ported from the Claude post-deploy-smoke-check skill (../../../claude/skills/post-deploy-smoke-check/SKILL.md) — not yet run against a real production deploy.",
+    "description": "Run a fast, time-boxed check against real production right after a deploy to catch a broken release before users report it -- distinct from release-smoke-checklist, which runs before shipping.",
+    "file": "catalog/qa/antigravity/skills/post-deploy-smoke-check/SKILL.md"
+  },
+  {
+    "id": "qa/antigravity/skills/SKILL",
+    "name": "release-smoke-checklist",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Ported from the Claude release-smoke-checklist skill (../../../claude/skills/release-smoke-checklist/SKILL.md) — not yet run against a real release.",
+    "description": "Build and execute a fast, time-boxed pre-release smoke suite covering critical user flows and known-fragile areas, ending in a go/no-go input.",
+    "file": "catalog/qa/antigravity/skills/release-smoke-checklist/SKILL.md"
+  },
+  {
+    "id": "qa/antigravity/skills/SKILL",
+    "name": "test-case-writer",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "skills",
+    "status": "experimental",
+    "context": "Ported from the Claude test-case-writer skill (../../../claude/skills/test-case-writer/SKILL.md) — not yet run against a real spec.",
+    "description": "Turn a feature spec, PR description, or ticket into a structured test case matrix covering happy path, edge cases, and negative cases.",
+    "file": "catalog/qa/antigravity/skills/test-case-writer/SKILL.md"
+  },
+  {
+    "id": "qa/antigravity/mcp/issue-tracker-mcp",
+    "name": "issue-tracker-mcp",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Ported from the Claude issue-tracker-mcp config (../../claude/mcp/issue-tracker-mcp.md) — not yet used against a real Jira/Trello/Notion workspace.",
+    "description": "Wires an issue-tracker MCP server (Jira/Confluence, Notion, Trello, or similar) into Antigravity so bug-triage-analyst and flaky-test-investigator can file the ticket directly instead of only producing a markdown write-up.",
+    "file": "catalog/qa/antigravity/mcp/issue-tracker-mcp.md"
+  },
+  {
+    "id": "qa/antigravity/mcp/playwright-mcp",
+    "name": "playwright-mcp",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Ported from the Claude playwright-mcp config (../../claude/mcp/playwright-mcp.md) — not yet run in a real project.",
+    "description": "Wires the official Playwright MCP server into Antigravity, giving direct structured browser control instead of writing and running throwaway Playwright scripts via run_command.",
+    "file": "catalog/qa/antigravity/mcp/playwright-mcp.md"
+  },
+  {
+    "id": "qa/antigravity/mcp/test-management-mcp",
+    "name": "test-management-mcp",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Ported from the Claude test-management-mcp config (../../claude/mcp/test-management-mcp.md) — not yet used against a real TestRail/Xray/Zephyr/Qase project. Speculative on the MCP-availability front specifically -- verify before relying on it.",
+    "description": "Wires a dedicated test-case-management platform (TestRail, Xray, Zephyr, Qase, or similar) into Antigravity so test-case-writer's matrix can be synced there and execution results recorded, instead of living only as markdown.",
+    "file": "catalog/qa/antigravity/mcp/test-management-mcp.md"
+  },
+  {
+    "id": "qa/antigravity/hooks/pre-commit-test-gate",
+    "name": "pre-commit-test-gate",
+    "area": "qa",
+    "platform": "antigravity",
+    "type": "hooks",
+    "status": "experimental",
+    "context": "Ported from the Claude pre-commit-test-gate hook (../../claude/hooks/pre-commit-test-gate.md) — not yet run in a real project. The hook mechanism itself (Decide hooks, JSON decision on stdout) differs from Claude's exit-code model, so this is a real re-implementation, not just a config translation -- verify against current Antigravity hooks docs before relying on it.",
+    "description": "Blocks an Antigravity agent from running `git commit` via run_command until the project's test command passes, so a broken test suite can't get committed silently.",
+    "file": "catalog/qa/antigravity/hooks/pre-commit-test-gate.md"
+  },
+  {
+    "id": "design-ux/claude/agents/design-system-architect",
+    "name": "design-system-architect",
+    "area": "design-ux",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Design-system authoring, token definitions, and component guidelines.",
+    "file": "catalog/design-ux/claude/agents/design-system-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "design-ux/claude/agents/ui-designer",
+    "name": "ui-designer",
+    "area": "design-ux",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Wireframing, high-fidelity layouts, and visual design.",
+    "file": "catalog/design-ux/claude/agents/ui-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "design-ux/claude/agents/ux-researcher",
+    "name": "ux-researcher",
+    "area": "design-ux",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "User-flow design, heuristic evaluations, and usability analysis.",
+    "file": "catalog/design-ux/claude/agents/ux-researcher.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "design-ux/codex/prompts/design-system-architect",
+    "name": "design-system-architect",
+    "area": "design-ux",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Design-system authoring, token definitions, and component guidelines.",
+    "file": "catalog/design-ux/codex/prompts/design-system-architect.md"
+  },
+  {
+    "id": "design-ux/codex/prompts/ui-designer",
+    "name": "ui-designer",
+    "area": "design-ux",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Wireframing, high-fidelity layouts, and visual design.",
+    "file": "catalog/design-ux/codex/prompts/ui-designer.md"
+  },
+  {
+    "id": "design-ux/codex/prompts/ux-researcher",
+    "name": "ux-researcher",
+    "area": "design-ux",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "User-flow design, heuristic evaluations, and usability analysis.",
+    "file": "catalog/design-ux/codex/prompts/ux-researcher.md"
+  },
+  {
+    "id": "design-ux/antigravity/agents/design-system-architect",
+    "name": "design-system-architect",
+    "area": "design-ux",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Design-system authoring, token definitions, and component guidelines.",
+    "file": "catalog/design-ux/antigravity/agents/design-system-architect.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "design-ux/antigravity/agents/ui-designer",
+    "name": "ui-designer",
+    "area": "design-ux",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Wireframing, high-fidelity layouts, and visual design.",
+    "file": "catalog/design-ux/antigravity/agents/ui-designer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "design-ux/antigravity/agents/ux-researcher",
+    "name": "ux-researcher",
+    "area": "design-ux",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "User-flow design, heuristic evaluations, and usability analysis.",
+    "file": "catalog/design-ux/antigravity/agents/ux-researcher.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "content/claude/agents/content-marketer",
+    "name": "content-marketer",
+    "area": "content",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Blog posts, marketing copy, and product announcements.",
+    "file": "catalog/content/claude/agents/content-marketer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "content/claude/agents/developer-advocate",
+    "name": "developer-advocate",
+    "area": "content",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Tutorials, community guides, and technical evangelism.",
+    "file": "catalog/content/claude/agents/developer-advocate.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "content/claude/agents/technical-writer",
+    "name": "technical-writer",
+    "area": "content",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "External-facing documentation, API guides, and integration tutorials.",
+    "file": "catalog/content/claude/agents/technical-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "content/codex/prompts/content-marketer",
+    "name": "content-marketer",
+    "area": "content",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Blog posts, marketing copy, and product announcements.",
+    "file": "catalog/content/codex/prompts/content-marketer.md"
+  },
+  {
+    "id": "content/codex/prompts/developer-advocate",
+    "name": "developer-advocate",
+    "area": "content",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Tutorials, community guides, and technical evangelism.",
+    "file": "catalog/content/codex/prompts/developer-advocate.md"
+  },
+  {
+    "id": "content/codex/prompts/technical-writer",
+    "name": "technical-writer",
+    "area": "content",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "External-facing documentation, API guides, and integration tutorials.",
+    "file": "catalog/content/codex/prompts/technical-writer.md"
+  },
+  {
+    "id": "content/antigravity/agents/content-marketer",
+    "name": "content-marketer",
+    "area": "content",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Blog posts, marketing copy, and product announcements.",
+    "file": "catalog/content/antigravity/agents/content-marketer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "content/antigravity/agents/developer-advocate",
+    "name": "developer-advocate",
+    "area": "content",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Tutorials, community guides, and technical evangelism.",
+    "file": "catalog/content/antigravity/agents/developer-advocate.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "content/antigravity/agents/technical-writer",
+    "name": "technical-writer",
+    "area": "content",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "External-facing documentation, API guides, and integration tutorials.",
+    "file": "catalog/content/antigravity/agents/technical-writer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "legal/claude/agents/contract-reviewer",
+    "name": "contract-reviewer",
+    "area": "legal",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vendor contract review, SLAs, and data processing agreements.",
+    "file": "catalog/legal/claude/agents/contract-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "legal/claude/agents/open-source-compliance-officer",
+    "name": "open-source-compliance-officer",
+    "area": "legal",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Auditing licenses of dependencies and preventing copyleft contamination.",
+    "file": "catalog/legal/claude/agents/open-source-compliance-officer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "legal/claude/agents/terms-of-service-author",
+    "name": "terms-of-service-author",
+    "area": "legal",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terms of service, EULAs, and privacy policy text generation.",
+    "file": "catalog/legal/claude/agents/terms-of-service-author.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "legal/codex/prompts/contract-reviewer",
+    "name": "contract-reviewer",
+    "area": "legal",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vendor contract review, SLAs, and data processing agreements.",
+    "file": "catalog/legal/codex/prompts/contract-reviewer.md"
+  },
+  {
+    "id": "legal/codex/prompts/open-source-compliance-officer",
+    "name": "open-source-compliance-officer",
+    "area": "legal",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Auditing licenses of dependencies and preventing copyleft contamination.",
+    "file": "catalog/legal/codex/prompts/open-source-compliance-officer.md"
+  },
+  {
+    "id": "legal/codex/prompts/terms-of-service-author",
+    "name": "terms-of-service-author",
+    "area": "legal",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terms of service, EULAs, and privacy policy text generation.",
+    "file": "catalog/legal/codex/prompts/terms-of-service-author.md"
+  },
+  {
+    "id": "legal/antigravity/agents/contract-reviewer",
+    "name": "contract-reviewer",
+    "area": "legal",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Vendor contract review, SLAs, and data processing agreements.",
+    "file": "catalog/legal/antigravity/agents/contract-reviewer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "legal/antigravity/agents/open-source-compliance-officer",
+    "name": "open-source-compliance-officer",
+    "area": "legal",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Auditing licenses of dependencies and preventing copyleft contamination.",
+    "file": "catalog/legal/antigravity/agents/open-source-compliance-officer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "legal/antigravity/agents/terms-of-service-author",
+    "name": "terms-of-service-author",
+    "area": "legal",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Terms of service, EULAs, and privacy policy text generation.",
+    "file": "catalog/legal/antigravity/agents/terms-of-service-author.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  }
+]
