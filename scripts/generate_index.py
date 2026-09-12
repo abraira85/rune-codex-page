@@ -20,7 +20,11 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
 INDEX_FILE = CATALOG / "index.json"
-AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa", "design-ux", "content", "legal", "hr", "finance", "marketing"]
+AREAS = [
+    "engineering", "database", "devops", "security", "data-ai", "business",
+    "qa", "design-ux", "content", "legal", "hr", "finance", "marketing",
+    "sales", "customer-success", "product"
+]
 TOOL_TYPES = [
     "claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
     "codex/agents-md", "codex/prompts",
@@ -76,6 +80,9 @@ def extract_data(path, area, t):
     if "model" in data:
         entry["model"] = data["model"]
     
+    body = text[m.end():].strip()
+    entry["content"] = body
+    
     return entry
 
 
@@ -92,6 +99,14 @@ def main():
         json.dump(catalog_index, f, indent=2, ensure_ascii=False)
         
     print(f"Generated {INDEX_FILE.relative_to(ROOT)} with {len(catalog_index)} items.")
+
+    # Also sync to docs/data/index.json for static GitHub Pages frontend
+    docs_data_file = ROOT / "docs" / "data" / "index.json"
+    docs_data_file.parent.mkdir(parents=True, exist_ok=True)
+    with docs_data_file.open("w", encoding="utf-8") as f:
+        json.dump(catalog_index, f, indent=2, ensure_ascii=False)
+    print(f"Synced {docs_data_file.relative_to(ROOT)}.")
+
 
 
 if __name__ == "__main__":

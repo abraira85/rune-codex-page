@@ -15,15 +15,36 @@ python3 scripts/install.py catalog/engineering/claude/agents/code-reviewer.md --
 ### 2. `validate.py`
 The source of truth for repository health. Every PR is checked against this script. It verifies that every Markdown file has valid YAML front-matter with `name`, `status`, `context`, and `description`.
 
-### 3. `generate_index.py`
-Crawls the `catalog/` tree and generates `index.json`, a machine-readable summary of the entire catalog used by CLIs and third-party tools.
+### 3. `lint_prompts.py`
+Semantic and structural prompt quality linter. Validates payload length, detects unfinished placeholders (`TODO`, `FIXME`), verifies JSON formatting in MCP definitions, and checks directive actionability.
 
-### 4. `batch_create_agents.py` & `batch_create_phase4.py`
-Templating scripts used to rapidly scaffold the initial repository structure.
+**Usage:**
+```bash
+python3 scripts/lint_prompts.py
+python3 scripts/lint_prompts.py --strict
+```
 
-## Development
+### 4. `rune-search.py`
+Terminal CLI catalog search utility. Allows instant querying of agents and tools across name, description, area, and type directly from your shell.
 
-If you modify these scripts, please ensure you run the unit tests:
+**Usage:**
+```bash
+python3 scripts/rune-search.py "sales"
+```
+
+### 5. `generate_index.py`
+Crawls the `catalog/` tree and compiles `catalog/index.json` as well as `docs/data/index.json` (for the static GitHub Pages UI) with full metadata and prompt payloads.
+
+### 6. Batch Generators
+- `batch_create_phase5.py`: Scaffolds HR, Finance, and Marketing agents & tools.
+- `batch_create_phase6.py`: Scaffolds Sales, Customer Success, Product agents, and core MCP servers (GitHub, Slack, Notion).
+
+## Development & Testing
+
+Ensure all quality checks and unit tests pass before submitting changes:
 ```bash
 pytest scripts/test_install.py
+python3 scripts/validate.py
+python3 scripts/lint_prompts.py --strict
 ```
+

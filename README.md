@@ -17,15 +17,39 @@ Organized by **area** first — what you're looking for — then by tool and typ
 
 | Area | For |
 |---|---|
-| [`engineering/`](./catalog/engineering) | General software development |
-| [`database/`](./catalog/database) | Data modeling, SQL, query optimization |
-| [`devops/`](./catalog/devops) | Infrastructure, CI/CD, cloud |
-| [`security/`](./catalog/security) | Security review, hardening |
-| [`data-ai/`](./catalog/data-ai) | ML, RAG, data pipelines, LLM ops |
-| [`business/`](./catalog/business) | Leadership, product, strategy |
-| [`qa/`](./catalog/qa) | Testing, quality assurance |
+| [`engineering/`](./catalog/engineering) | General software development, architecture, code reviews |
+| [`database/`](./catalog/database) | Data modeling, migrations, SQL, query optimization |
+| [`devops/`](./catalog/devops) | Infrastructure as code, CI/CD pipelines, cloud, reliability |
+| [`security/`](./catalog/security) | Security auditing, threat modeling, vulnerability remediation |
+| [`data-ai/`](./catalog/data-ai) | ML engineering, RAG pipelines, LLM evaluation, embeddings |
+| [`qa/`](./catalog/qa) | Test plans, QA strategy, E2E test suites, regression |
+| [`product/`](./catalog/product) | PRD authoring, user stories, scrum facilitation, roadmaps |
+| [`sales/`](./catalog/sales) | Sales engineering, enterprise RFPs, targeted SDR outreach |
+| [`customer-success/`](./catalog/customer-success) | Tier-2/3 technical support, churn analysis, retention |
+| [`marketing/`](./catalog/marketing) | Technical SEO, developer marketing, social changelogs |
+| [`design-ux/`](./catalog/design-ux) | Design system tokens, UX wireframes, accessibility review |
+| [`content/`](./catalog/content) | Technical documentation, user manuals, API reference docs |
+| [`business/`](./catalog/business) | Business strategy, executive decision support, team alignment |
+| [`finance/`](./catalog/finance) | Expense auditing, cloud burn rate & runway optimization |
+| [`hr/`](./catalog/hr) | Technical talent sourcing, onboarding buddy, employee handbook |
+| [`legal/`](./catalog/legal) | Compliance audits, open source licensing, privacy policies |
 
-Each area repeats the same pattern — `claude/{agents,skills,mcp,hooks}`, `codex/{agents-md,prompts}`, and (rolling out area by area, starting with `qa/`) `antigravity/{agents,skills,mcp,hooks}` — see [`catalog/README.md`](./catalog/README.md) for the full layout.
+Each area repeats the unified structure across `claude/{agents,skills,mcp,hooks}`, `codex/{agents-md,prompts}`, and `antigravity/{agents,skills,mcp,hooks}`.
+
+## `~ ❯ open docs/` (Web UI Explorer)
+
+Prefer a graphical interface? Rune Codex includes a **zero-dependency static Web UI** in [`docs/`](./docs) (ready for GitHub Pages):
+
+- **Instant Full-Text Search**: Filter across 370+ agents, prompts, and tools in under 5ms.
+- **Faceted Filters**: Filter by platform (`Claude`, `Codex`, `Antigravity`), tool type (`Agents`, `Skills`, `MCP`, `Prompts`), domain area, and production status.
+- **One-Click Actions**: Modal previews with instant "Copy Prompt" and "Copy Install Command" clipboard buttons.
+
+To run locally:
+```bash
+python3 -m http.server 8080 --directory docs
+```
+Or view online once GitHub Pages is enabled on your fork.
+
 
 ## `~ ❯ cat CONVENTIONS.md`
 
@@ -81,10 +105,12 @@ Contributions are welcome — this isn't a solo drop, it's meant to grow. Start 
 Releases follow [Semantic Versioning](https://semver.org/) and are tracked in [`CHANGELOG.md`](./CHANGELOG.md).
 
 ## `~ ❯ roadmap`
-
+ 
 - [x] First real items in the catalog (`qa/` team: 19 agents, 4 skills, 3 MCP, 1 hook)
 - [x] A generated `index.json` so the catalog is machine-readable
 - [x] Tagged `v0.1.0` once there's enough here to call a first release
+- [x] Expanded business domains (`hr/`, `finance/`, `marketing/`) & CLI search (`rune-search.py`) — tagged `v0.2.0`
+- [x] Complete enterprise coverage (`sales/`, `customer-success/`, `product/`), static Web UI explorer (`docs/`), prompt quality linter (`lint_prompts.py`), and 370 validated items — tagged `v0.3.0`
 
 ## `~ ❯ whoami`
 

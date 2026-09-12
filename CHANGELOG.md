@@ -7,7 +7,31 @@ and the project follows [Semantic Versioning](https://semver.org/) — see
 [`CONTRIBUTING.md`](./CONTRIBUTING.md#versioning) for what MAJOR/MINOR/PATCH
 mean for a repo of prompts rather than code.
 
-## [Unreleased]
+## [0.3.0] - 2026-09-12
+
+### Added
+- **Interactive Web UI (`docs/`)**: Zero-dependency static explorer ready for GitHub Pages hosting, with instant live search (<5ms), faceted filtering (by platform, area, tool type, status), modal prompt inspect, and one-click copy buttons.
+- **Prompt Quality Linter (`scripts/lint_prompts.py`)**: Strict heuristic validation checking prompt length, placeholder detection (`TODO`, `FIXME`), actionability directives, and valid JSON structure inside MCP configurations.
+- **New Business Domains**:
+  - `sales/`: `sales-engineer`, `sdr-outreach` (across Claude, Codex, Antigravity).
+  - `customer-success/`: `support-engineer`, `churn-analyst` (across Claude, Codex, Antigravity).
+  - `product/`: `scrum-master`, `product-manager` (across Claude, Codex, Antigravity).
+- **Core MCP Servers**:
+  - `github-mcp` (Engineering): API integration for PR reviews and repository operations.
+  - `slack-mcp` (Business): Workspace communication and incident notification dispatch.
+  - `notion-mcp` (Product): Notion database and PRD page synchronization.
+- **Catalog Index Sync**: `scripts/generate_index.py` now populates both `catalog/index.json` and `docs/data/index.json` with prompt payloads.
+- Reached **370 total validated catalog items** across **16 areas** and **3 platforms**.
+
+## [0.2.0] - 2026-09-12
+
+### Added
+- New business areas: `hr/` (`talent-sourcer`, `onboarding-buddy`, `bamboo-hr-mcp`), `finance/` (`expense-auditor`, `burn-rate-analyst`), and `marketing/` (`seo-optimizer`, `social-media-manager`).
+- CLI search utility `scripts/rune-search.py` for terminal-based catalog browsing.
+- Unit testing suite `scripts/test_install.py` covering installation edge cases and nested code fences.
+- Fixed nested markdown fence extraction in `scripts/install.py`.
+
+## [0.1.0] - 2026-09-12
 
 ### Added
 
