@@ -38,6 +38,7 @@ Crawls the `catalog/` tree and compiles `catalog/index.json` as well as `docs/da
 ### 6. Batch Generators
 - `batch_create_phase5.py`: Scaffolds HR, Finance, and Marketing agents & tools.
 - `batch_create_phase6.py`: Scaffolds Sales, Customer Success, Product agents, and core MCP servers (GitHub, Slack, Notion).
+- `batch_create_phase7.py`: Massive enterprise expansion: 26 in-depth roles across IT-Ops, Operations, Comms, Sales, Product, Marketing, Finance, HR, and Legal, plus enterprise MCPs (HubSpot, Jira, Google Workspace).
 
 ## Development & Testing
 

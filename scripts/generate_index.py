@@ -23,7 +23,7 @@ INDEX_FILE = CATALOG / "index.json"
 AREAS = [
     "engineering", "database", "devops", "security", "data-ai", "business",
     "qa", "design-ux", "content", "legal", "hr", "finance", "marketing",
-    "sales", "customer-success", "product"
+    "sales", "customer-success", "product", "it-ops", "operations", "communications"
 ]
 TOOL_TYPES = [
     "claude/agents", "claude/skills", "claude/mcp", "claude/hooks",

@@ -30,7 +30,10 @@ const AREA_COLORS = {
   'business': '#6366f1',
   'finance': '#eab308',
   'hr': '#22c55e',
-  'legal': '#94a3b8'
+  'legal': '#94a3b8',
+  'it-ops': '#38bdf8',
+  'operations': '#a855f7',
+  'communications': '#f43f5e'
 };
 
 // DOM Elements

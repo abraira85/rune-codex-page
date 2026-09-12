@@ -27,12 +27,15 @@ Organized by **area** first — what you're looking for — then by tool and typ
 | [`sales/`](./catalog/sales) | Sales engineering, enterprise RFPs, targeted SDR outreach |
 | [`customer-success/`](./catalog/customer-success) | Tier-2/3 technical support, churn analysis, retention |
 | [`marketing/`](./catalog/marketing) | Technical SEO, developer marketing, social changelogs |
+| [`it-ops/`](./catalog/it-ops) | IT administration, Zero Trust identity, helpdesk support |
+| [`operations/`](./catalog/operations) | Revenue operations (RevOps), SaaS procurement, BizOps |
+| [`communications/`](./catalog/communications) | PR & media relations, internal comms, crisis management |
 | [`design-ux/`](./catalog/design-ux) | Design system tokens, UX wireframes, accessibility review |
 | [`content/`](./catalog/content) | Technical documentation, user manuals, API reference docs |
 | [`business/`](./catalog/business) | Business strategy, executive decision support, team alignment |
-| [`finance/`](./catalog/finance) | Expense auditing, cloud burn rate & runway optimization |
-| [`hr/`](./catalog/hr) | Technical talent sourcing, onboarding buddy, employee handbook |
-| [`legal/`](./catalog/legal) | Compliance audits, open source licensing, privacy policies |
+| [`finance/`](./catalog/finance) | Expense auditing, FP&A modeling, cash flow & runway |
+| [`hr/`](./catalog/hr) | Technical talent sourcing, onboarding, compensation bands |
+| [`legal/`](./catalog/legal) | Commercial contracts, IP/patents, open source licensing |
 
 Each area repeats the unified structure across `claude/{agents,skills,mcp,hooks}`, `codex/{agents-md,prompts}`, and `antigravity/{agents,skills,mcp,hooks}`.
 
@@ -40,8 +43,8 @@ Each area repeats the unified structure across `claude/{agents,skills,mcp,hooks}
 
 Prefer a graphical interface? Rune Codex includes a **zero-dependency static Web UI** in [`docs/`](./docs) (ready for GitHub Pages):
 
-- **Instant Full-Text Search**: Filter across 370+ agents, prompts, and tools in under 5ms.
-- **Faceted Filters**: Filter by platform (`Claude`, `Codex`, `Antigravity`), tool type (`Agents`, `Skills`, `MCP`, `Prompts`), domain area, and production status.
+- **Instant Full-Text Search**: Filter across 454+ agents, prompts, and tools in under 5ms.
+- **Faceted Filters**: Filter by platform (`Claude`, `Codex`, `Antigravity`), tool type (`Agents`, `Skills`, `MCP`, `Prompts`), domain area (19 areas), and production status.
 - **One-Click Actions**: Modal previews with instant "Copy Prompt" and "Copy Install Command" clipboard buttons.
 
 To run locally:
@@ -111,6 +114,7 @@ Releases follow [Semantic Versioning](https://semver.org/) and are tracked in [`
 - [x] Tagged `v0.1.0` once there's enough here to call a first release
 - [x] Expanded business domains (`hr/`, `finance/`, `marketing/`) & CLI search (`rune-search.py`) — tagged `v0.2.0`
 - [x] Complete enterprise coverage (`sales/`, `customer-success/`, `product/`), static Web UI explorer (`docs/`), prompt quality linter (`lint_prompts.py`), and 370 validated items — tagged `v0.3.0`
+- [x] Deep enterprise scaling (26 detailed roles, 3 new areas `it-ops/`, `operations/`, `communications/`, MCPs for HubSpot/Jira/Google Workspace, and 454 validated items) — tagged `v0.4.0`
 
 ## `~ ❯ whoami`
 

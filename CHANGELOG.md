@@ -7,6 +7,29 @@ and the project follows [Semantic Versioning](https://semver.org/) — see
 [`CONTRIBUTING.md`](./CONTRIBUTING.md#versioning) for what MAJOR/MINOR/PATCH
 mean for a repo of prompts rather than code.
 
+## [0.4.0] - 2026-09-12
+
+### Added
+- **Deep Enterprise Expansion (26 New In-Depth Roles)**:
+  - **`it-ops/`** (New Department): `it-admin`, `helpdesk-specialist`, `identity-governance-lead` (Zero Trust, PAM, Jamf/InTune compliance, Okta/Google Workspace lifecycle).
+  - **`operations/`** (New Department): `revops-architect`, `procurement-manager`, `bizops-analyst` (revenue attribution, SaaS contract negotiation, cross-functional OKRs).
+  - **`communications/`** (New Department): `pr-specialist`, `internal-comms-lead`, `crisis-comms-manager` (press releases, executive All-Hands scripts, emergency crisis holding statements).
+  - **`sales/`**: `account-executive` (MEDDPICC qualification, business case ROI), `sales-enablement` (competitive battlecards, objection handling), `proposal-writer` (formal RFP/tender responses).
+  - **`product/`**: `product-ops` (feature flag governance, feedback taxonomy), `growth-pm` (activation funnels, viral loops, A/B testing), `user-story-author` (epics decomposition, Gherkin acceptance criteria).
+  - **`customer-success/`**: `tam-architect` (Technical Account Management, TQBRs, architecture reviews), `implementation-specialist` (onboarding, legacy data migration, go-live checklists).
+  - **`marketing/`**: `product-marketing-manager` (PMM positioning, GTM launches), `content-strategist` (full-funnel editorial calendar, whitepapers), `performance-marketer` (Google/LinkedIn Ads, CAC/LTV attribution).
+  - **`finance/`**: `fp-and-a-analyst` (rolling 3-statement models, OpEx budgets, variance analysis), `cash-flow-planner` (13-week cash forecasting, FX hedging, payment gateways).
+  - **`hr/`**: `compensation-analyst` (Radford/Pave salary bands, equity grants, pay parity), `performance-coach` (360 feedback reviews, PIP plans, manager coaching).
+  - **`legal/`**: `contract-negotiator` (commercial redlining, MSA/DPA fallback library), `ip-patent-analyst` (prior art searches, patent disclosures, open source copyleft audit).
+- **New Enterprise MCP Servers**:
+  - `hubspot-mcp` (`sales`): CRM pipeline inspection and lead lifecycle automation.
+  - `jira-mcp` (`product`): Epics, user stories, and sprint tracking in Jira Cloud.
+  - `google-workspace-mcp` (`it-ops`): Automated directory management, groups, and identity governance.
+- **Frontend Web UI Upgraded**:
+  - Added support for 19 areas, color palettes for IT-Ops, Operations, and Communications, and updated counters for 454 catalog items.
+- **Catalog Scale Milestone**:
+  - Reached **454 total validated catalog items** across **19 areas** and **3 platforms** with 100% strict prompt linter compliance.
+
 ## [0.3.0] - 2026-09-12
 
 ### Added
