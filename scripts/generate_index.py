@@ -20,7 +20,7 @@ except ImportError:
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
 INDEX_FILE = CATALOG / "index.json"
-AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa", "design-ux", "content", "legal"]
+AREAS = ["engineering", "database", "devops", "security", "data-ai", "business", "qa", "design-ux", "content", "legal", "hr", "finance", "marketing"]
 TOOL_TYPES = [
     "claude/agents", "claude/skills", "claude/mcp", "claude/hooks",
     "codex/agents-md", "codex/prompts",

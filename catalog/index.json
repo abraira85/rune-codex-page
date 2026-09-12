@@ -4840,5 +4840,309 @@
       "run_command"
     ],
     "model": "inherit"
+  },
+  {
+    "id": "hr/claude/agents/onboarding-buddy",
+    "name": "onboarding-buddy",
+    "area": "hr",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Answers HR and company policy questions based on the employee handbook.",
+    "file": "catalog/hr/claude/agents/onboarding-buddy.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "hr/claude/agents/talent-sourcer",
+    "name": "talent-sourcer",
+    "area": "hr",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes CVs against Job Descriptions and drafts recruitment outreach.",
+    "file": "catalog/hr/claude/agents/talent-sourcer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "hr/claude/mcp/bamboo-hr-mcp",
+    "name": "bamboo-hr-mcp",
+    "area": "hr",
+    "platform": "claude",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Context provider for the company org chart and employee directory.",
+    "file": "catalog/hr/claude/mcp/bamboo-hr-mcp.md"
+  },
+  {
+    "id": "hr/codex/prompts/onboarding-buddy",
+    "name": "onboarding-buddy",
+    "area": "hr",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Answers HR and company policy questions based on the employee handbook.",
+    "file": "catalog/hr/codex/prompts/onboarding-buddy.md"
+  },
+  {
+    "id": "hr/codex/prompts/talent-sourcer",
+    "name": "talent-sourcer",
+    "area": "hr",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes CVs against Job Descriptions and drafts recruitment outreach.",
+    "file": "catalog/hr/codex/prompts/talent-sourcer.md"
+  },
+  {
+    "id": "hr/antigravity/agents/onboarding-buddy",
+    "name": "onboarding-buddy",
+    "area": "hr",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Answers HR and company policy questions based on the employee handbook.",
+    "file": "catalog/hr/antigravity/agents/onboarding-buddy.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "hr/antigravity/agents/talent-sourcer",
+    "name": "talent-sourcer",
+    "area": "hr",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes CVs against Job Descriptions and drafts recruitment outreach.",
+    "file": "catalog/hr/antigravity/agents/talent-sourcer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "hr/antigravity/mcp/bamboo-hr-mcp",
+    "name": "bamboo-hr-mcp",
+    "area": "hr",
+    "platform": "antigravity",
+    "type": "mcp",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Context provider for the company org chart and employee directory.",
+    "file": "catalog/hr/antigravity/mcp/bamboo-hr-mcp.md"
+  },
+  {
+    "id": "finance/claude/agents/burn-rate-analyst",
+    "name": "burn-rate-analyst",
+    "area": "finance",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes cloud and operational spend to calculate burn rate.",
+    "file": "catalog/finance/claude/agents/burn-rate-analyst.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "finance/claude/agents/expense-auditor",
+    "name": "expense-auditor",
+    "area": "finance",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Audits expense reports against company policy.",
+    "file": "catalog/finance/claude/agents/expense-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "finance/codex/prompts/burn-rate-analyst",
+    "name": "burn-rate-analyst",
+    "area": "finance",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes cloud and operational spend to calculate burn rate.",
+    "file": "catalog/finance/codex/prompts/burn-rate-analyst.md"
+  },
+  {
+    "id": "finance/codex/prompts/expense-auditor",
+    "name": "expense-auditor",
+    "area": "finance",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Audits expense reports against company policy.",
+    "file": "catalog/finance/codex/prompts/expense-auditor.md"
+  },
+  {
+    "id": "finance/antigravity/agents/burn-rate-analyst",
+    "name": "burn-rate-analyst",
+    "area": "finance",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes cloud and operational spend to calculate burn rate.",
+    "file": "catalog/finance/antigravity/agents/burn-rate-analyst.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "finance/antigravity/agents/expense-auditor",
+    "name": "expense-auditor",
+    "area": "finance",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Audits expense reports against company policy.",
+    "file": "catalog/finance/antigravity/agents/expense-auditor.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "marketing/claude/agents/seo-optimizer",
+    "name": "seo-optimizer",
+    "area": "marketing",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes content for SEO best practices and keyword density.",
+    "file": "catalog/marketing/claude/agents/seo-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "marketing/claude/agents/social-media-manager",
+    "name": "social-media-manager",
+    "area": "marketing",
+    "platform": "claude",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Drafts social media threads based on technical changelogs.",
+    "file": "catalog/marketing/claude/agents/social-media-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "sonnet"
+  },
+  {
+    "id": "marketing/codex/prompts/seo-optimizer",
+    "name": "seo-optimizer",
+    "area": "marketing",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes content for SEO best practices and keyword density.",
+    "file": "catalog/marketing/codex/prompts/seo-optimizer.md"
+  },
+  {
+    "id": "marketing/codex/prompts/social-media-manager",
+    "name": "social-media-manager",
+    "area": "marketing",
+    "platform": "codex",
+    "type": "prompts",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Drafts social media threads based on technical changelogs.",
+    "file": "catalog/marketing/codex/prompts/social-media-manager.md"
+  },
+  {
+    "id": "marketing/antigravity/agents/seo-optimizer",
+    "name": "seo-optimizer",
+    "area": "marketing",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Analyzes content for SEO best practices and keyword density.",
+    "file": "catalog/marketing/antigravity/agents/seo-optimizer.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
+  },
+  {
+    "id": "marketing/antigravity/agents/social-media-manager",
+    "name": "social-media-manager",
+    "area": "marketing",
+    "platform": "antigravity",
+    "type": "agents",
+    "status": "experimental",
+    "context": "Initial experimental version.",
+    "description": "Drafts social media threads based on technical changelogs.",
+    "file": "catalog/marketing/antigravity/agents/social-media-manager.md",
+    "tools": [
+      "view_file",
+      "grep_search",
+      "list_dir",
+      "run_command"
+    ],
+    "model": "inherit"
   }
 ]

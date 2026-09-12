@@ -41,7 +41,6 @@ except ImportError:
     sys.exit("Missing dependency: pip install -r scripts/requirements.txt")
 
 FRONTMATTER_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.DOTALL)
-FENCED_BLOCK_RE = re.compile(r"```[a-zA-Z0-9_-]*\n(.*?)\n```", re.DOTALL)
 CLAUDE_FIELDS = ("name", "description", "tools", "model")
 ANTIGRAVITY_FIELDS = ("name", "description", "tools", "model", "mainAgent",
                       "subagent", "commandExecutionPolicy", "mcpServers", "skills")
@@ -73,6 +72,28 @@ def extract_prompt_section(body: str, path: Path) -> str:
     return prompt_section + "\n"
 
 
+def extract_prompt_block(prompt_section: str) -> str:
+    lines = prompt_section.strip().splitlines()
+    if not lines or not lines[0].startswith("```"):
+        return prompt_section.strip() + "\n"
+    
+    # Count backticks in the opening fence (e.g. ```markdown -> 3)
+    opening_line = lines[0].strip()
+    backtick_count = len(opening_line) - len(opening_line.lstrip("`"))
+    closing_fence = "`" * backtick_count
+
+    # Find the LAST matching closing fence
+    closing_idx = -1
+    for i in range(len(lines)-1, 0, -1):
+        if lines[i].strip() == closing_fence:
+            closing_idx = i
+            break
+            
+    if closing_idx != -1:
+        return "\n".join(lines[1:closing_idx]).strip() + "\n"
+    return prompt_section.strip() + "\n"
+
+
 def parse_item(path: Path):
     text = path.read_text(encoding="utf-8")
     m = FRONTMATTER_RE.match(text)
@@ -81,9 +102,7 @@ def parse_item(path: Path):
     data = yaml.safe_load(m.group(1)) or {}
 
     prompt_section = extract_prompt_section(m.group(2), path)
-
-    block_m = FENCED_BLOCK_RE.search(prompt_section)
-    prompt_block = (block_m.group(1).strip() if block_m else prompt_section.strip()) + "\n"
+    prompt_block = extract_prompt_block(prompt_section)
     return data, prompt_block, prompt_section
 
 
