@@ -107,15 +107,6 @@ Contributions are welcome — this isn't a solo drop, it's meant to grow. Start 
 
 Releases follow [Semantic Versioning](https://semver.org/) and are tracked in [`CHANGELOG.md`](./CHANGELOG.md).
 
-## `~ ❯ roadmap`
- 
-- [x] First real items in the catalog (`qa/` team: 19 agents, 4 skills, 3 MCP, 1 hook)
-- [x] A generated `index.json` so the catalog is machine-readable
-- [x] Tagged `v0.1.0` once there's enough here to call a first release
-- [x] Expanded business domains (`hr/`, `finance/`, `marketing/`) & CLI search (`rune-search.py`) — tagged `v0.2.0`
-- [x] Complete enterprise coverage (`sales/`, `customer-success/`, `product/`), static Web UI explorer (`docs/`), prompt quality linter (`lint_prompts.py`), and 370 validated items — tagged `v0.3.0`
-- [x] Deep enterprise scaling (26 detailed roles, 3 new areas `it-ops/`, `operations/`, `communications/`, MCPs for HubSpot/Jira/Google Workspace, and 454 validated items) — tagged `v0.4.0`
-
 ## `~ ❯ whoami`
 
 Built by [Rober de Ávila Abraira](https://github.com/abraira85) — [outboss.io](https://outboss.io)
