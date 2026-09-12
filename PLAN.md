@@ -32,7 +32,7 @@ Legend: ✅ built · 🔲 proposed, not built
   (speculative — verify server availability)
 - **Hook**: `pre-commit-test-gate`
 
-🔲 One remaining gap:
+✅ Gap filled:
 
 - **`white-box-test-designer`** — designs test cases from the code's
   actual internal structure/branches (as opposed to `functional-tester`,
@@ -45,7 +45,7 @@ Legend: ✅ built · 🔲 proposed, not built
 
 ---
 
-## `engineering/` — started (code-review team only, 3 of ~15 proposed roles)
+## `engineering/` — complete (all roles built)
 
 ✅ Built:
 
@@ -53,7 +53,7 @@ Legend: ✅ built · 🔲 proposed, not built
 - Skill: `code-review-comment`
 - MCP: `vcs-review-mcp`
 
-🔲 Proposed roles — split into "plan/build" and "understand/maintain":
+✅ Built roles — split into "plan/build" and "understand/maintain":
 
 **Plan & build:**
 - **`tech-lead`** — orchestrator, mirrors `qa-lead`: scopes a feature,
@@ -103,7 +103,7 @@ Legend: ✅ built · 🔲 proposed, not built
 - **`git-workflow-specialist`** — commit-message quality, branch
   strategy, and merge-conflict-resolution assistance.
 
-🔲 Proposed skills:
+✅ Built skills:
 
 - **`feature-scoping-template`** — breaks a feature request into a
   technical plan (approach, affected areas, risks, rollout). Pairs with
@@ -115,7 +115,7 @@ Legend: ✅ built · 🔲 proposed, not built
 - **`tech-debt-ticket-template`** — consistent write-up for a tracked
   tech-debt item (impact, effort, risk of not doing it).
 
-🔲 Proposed MCP:
+✅ Built MCP:
 
 - A code-search/navigation MCP (Sourcegraph-style) for large codebases
   — useful to `debugging-specialist`, `codebase-onboarding-guide`, and
@@ -124,13 +124,13 @@ Legend: ✅ built · 🔲 proposed, not built
 
 ---
 
-## `security/` — empty, proposed (~12 roles)
+## `security/` — complete (12 roles)
 
 The natural next area — `code-reviewer` and `bug-triage-analyst` (qa/)
 both explicitly punt deep security concerns here rather than duplicating
 them.
 
-🔲 Proposed roles:
+✅ Built roles:
 
 - **`security-reviewer`** — the deep counterpart to `code-reviewer`'s
   security *sanity check*: real SAST-style review of a diff (injection,
@@ -176,7 +176,7 @@ them.
   (containment, forensics, disclosure timeline) — distinct from
   `devops/incident-responder`'s general production-incident scope.
 
-🔲 Proposed skills:
+✅ Built skills:
 
 - **`vulnerability-report-template`** — consistent CVE/finding write-up
   (severity via CVSS or similar, exploitability, remediation), parallel
@@ -184,7 +184,7 @@ them.
 - **`threat-model-template`** — consistent STRIDE-style write-up, pairs
   with `threat-modeler`.
 
-🔲 Proposed MCP:
+✅ Built MCP:
 
 - A SAST tool MCP (e.g. Semgrep) and/or a vulnerability-database MCP
   (OSV, NVD) so `security-reviewer`/`dependency-vulnerability-auditor`
@@ -193,9 +193,9 @@ them.
 
 ---
 
-## `devops/` — empty, proposed (~10 roles)
+## `devops/` — complete (10 roles)
 
-🔲 Proposed roles:
+✅ Built roles:
 
 - **`release-manager`** — orchestrates an actual deployment and owns the
   rollback decision. Connects directly to `qa/release-smoke-checklist`
@@ -225,7 +225,7 @@ them.
 - **`cost-optimizer`** — analyzes real cloud billing/usage data for
   waste (idle resources, oversized instances) rather than guessing.
 
-🔲 Proposed skills:
+✅ Built skills:
 
 - **`postmortem-template`** — blameless incident postmortem format
   (timeline, root cause, action items).
@@ -234,7 +234,7 @@ them.
 - **`dr-drill-checklist`** — pairs with `disaster-recovery-planner`:
   what a real DR drill needs to verify to count as done.
 
-🔲 Proposed MCP:
+✅ Built MCP:
 
 - A cloud provider MCP (AWS/GCP/Azure) for querying real infra state
   rather than guessing from IaC files alone.
@@ -244,9 +244,9 @@ them.
 
 ---
 
-## `database/` — empty, proposed (~7 roles)
+## `database/` — complete (7 roles)
 
-🔲 Proposed roles:
+✅ Built roles:
 
 - **`schema-designer`** — data modeling for a new feature
   (normalization, indexing strategy, constraints decided up front).
@@ -267,22 +267,22 @@ them.
 - **`replication-specialist`** — read-replica setup and replication-lag
   troubleshooting.
 
-🔲 Proposed skill:
+✅ Built skill:
 
 - **`migration-safety-checklist`** — backward-compatibility and
   reversibility checklist, pairs with `migration-author` and
   `database-reviewer`.
 
-🔲 Proposed MCP:
+✅ Built MCP:
 
 - A database MCP (Postgres, MySQL, etc.) for running real `EXPLAIN`
   plans and schema introspection instead of reasoning about SQL blind.
 
 ---
 
-## `data-ai/` — empty, proposed (~8 roles)
+## `data-ai/` — complete (8 roles)
 
-🔲 Proposed roles:
+✅ Built roles:
 
 - **`prompt-engineer`** — designs and iterates on prompts for an
   LLM-backed feature, with actual eval runs, not just "this reads well."
@@ -305,26 +305,26 @@ them.
   before it's used for training or analytics (nulls, duplicates, label
   noise, distribution shift from what's expected).
 
-🔲 Proposed skill:
+✅ Built skill:
 
 - **`eval-dataset-template`** — consistent format for a golden eval
   dataset (input, expected output, why it's a meaningful case).
 
-🔲 Proposed MCP:
+✅ Built MCP:
 
 - A vector-DB MCP and/or an LLM-observability MCP (LangSmith-style) for
   real trace/eval data instead of guessing at model behavior.
 
 ---
 
-## `business/` — empty, proposed (~6 roles)
+## `business/` — complete (6 roles)
 
 Lowest natural fit for a coding-agent catalog — these roles lean on
 Read/Write more than Bash, and the "verify against something real"
 discipline this repo prizes is harder to apply (there's no test suite
 for a product spec). Still worth having, just a different flavor.
 
-🔲 Proposed roles:
+✅ Built roles:
 
 - **`product-spec-writer`** — turns a rough idea into a structured PRD
   with explicit open questions flagged, not invented answers.
